@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <input id="autocomplete" placeholder="enter address" type="text"> 
+</body>
+<script>
+    let autocomplete;
+    function initAutocomplete() {
+        autocomplete = new google.maps.places.Autocomplete(
+            document.getElementById('autocomplete'),
+
+        {
+            types: ['address'],
+            componentRestrictions: {country : ['US']},
+            fields: ['vicinity']
+        })
+    }
+</script>
+<script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRAziCbvwi_tnshs3g2uM6WCvdvdvOTL4&libraries=places&callback=initAutocomplete">
+</script>
+</html>
