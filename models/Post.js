@@ -12,7 +12,7 @@ Post.init(
            primaryKey: true
        } ,
        post_text: {
-           type: DataTypes.Text,
+           type: DataTypes.TEXT,
            allowNull: false,
            validate: {
                len: [4]
