@@ -60,4 +60,44 @@ router.post('/',authorize_user,(req,res) => {
     });
 });
 
+// update a post
+router.put('/:id',authorize_user,(req,res) => {
+    Post.update(req.body, {
+        where: {
+            id: req.params.id
+        }
+    })
+    .then(dbPostData => {
+        if(!dbPostData[0]) {
+            res.status(404).json({message: 'no post found with this id'});
+            return;
+        }
+        res.json(dbPostData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    })
+});
+
+// delete a post
+router.delete('/:id',authorize_user,(req,res) => {
+    Post.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+    .then(dbPostData => {
+        if(!dbPostData) {
+            res.status(404).json({message: 'no post found with that id'});
+            return;
+        }
+        res.json(dbPostData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
 module.exports = router;
