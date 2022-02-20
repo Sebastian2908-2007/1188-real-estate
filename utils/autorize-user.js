@@ -1,6 +1,6 @@
 const authorize_user = (req,res,next) => {
-    if (!req.sesion.user_id) {
-        res.redirect('/api/users/login');
+    if (!req.session.user_id) {
+        res.status(404).json({message:'you need to be logged in first'});
     }else{
         next();
     }
