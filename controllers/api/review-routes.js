@@ -58,4 +58,44 @@ router.post('/',authorize_user,(req,res) => {
       res.status(500).json(err);
   });
 });
+
+// update a review
+router.put('/:id',authorize_user,(req,res) => {
+    Review.update(req.body, {
+        where: {
+            id: req.params.id
+        }
+    })
+    .then(dbReviewData => {
+        if(!dbReviewData[0]) {
+            res.status(404).jsonp({message: 'sorry no review found with thst id'});
+            return;
+        }
+        res.json(dbReviewData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
+// delete a review
+router.delete('/:id',authorize_user,(req,res) => {
+    Review.destroy({
+        where: {
+            id: req.params.id 
+        }
+    })
+    .then(dbReviewData => {
+        if(!dbReviewData) {
+            res.status(404).json({message: 'no review found with that id!'});
+            return;
+        }
+        res.json(dbReviewData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
 module.exports = router;
