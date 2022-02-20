@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const {User, Review, Post} = require('../../models');
 const bcrypt = require('bcrypt');
+const authorize_user = require('../../utils/autorize-user');
 
 // get all users
 router.get('/', (req,res) => {
@@ -104,8 +105,8 @@ router.post('/logout', (req,res) => {
     }
 });
 
-// update user info
-router.put('/:id',(req,res) => {
+// update user info added middleware funtion to make sure its a logged in user before updating any info
+router.put('/:id',authorize_user,(req,res) => {
     User.update(req.body, {
         individualHooks: true,
         where: {
@@ -127,8 +128,8 @@ router.put('/:id',(req,res) => {
     })
 });
 
-// delete user
-router.delete('/:id',(req,res) => {
+// delete user added middleware funtion to make sure its a logged in user before deleting any info
+router.delete('/:id',authorize_user,(req,res) => {
     User.destroy({
         where: {
             id: req.params.id
