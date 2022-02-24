@@ -7,6 +7,10 @@ const sequelize = require('./config/connection');
 const app = express();
 // configuring port
 const PORT = process.env.PORT || 3001;
+// require express handlebars
+const exphbs = require('express-handlebars');
+// activate handlebars and pass in any helper functions
+const hbs = exphbs.create({});
 // getting all routes for use in as middlewear
 const routes = require('./controllers');
 // require express session this allows us to create sessions
@@ -28,6 +32,9 @@ const sess = {
 };
 // use the sess we created 
 app.use(session(sess));
+// set  handlebars as our view engine
+app.engine('handlebars',hbs.engine);
+app.set('view engine', 'handlebars');
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
