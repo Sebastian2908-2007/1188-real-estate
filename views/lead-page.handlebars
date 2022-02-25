@@ -1,4 +1,4 @@
-<form action="/profile" method="post" enctype="multipart/form-data">
+<form id="lead-submit-form" action="/get-cash-offer" method="post" enctype="multipart/form-data">
 <div> 
   <label for="first-name" name="first-name"></label>
   <input type="text" name="first-name" />
@@ -17,24 +17,8 @@
  </div> 
 <div> 
   <label for="walk-through-video" name="walk-through-video"></label>
-  <input type="file" name="walk-through-video" />
+  <input id="video-upload"type="file" name="walk-through-video" />
  </div> 
+ <button type="submit" >Submit</button>
 </form>
-<!--scripts for google autocomplete-->
-<script>
-    let autocomplete;
-function initAutocomplete() {
-    autocomplete = new google.maps.places.Autocomplete(
-        document.getElementById('autocomplete'),
-
-    {
-        types: ['address'],
-        componentRestrictions: {country : ['US']},
-        fields: ['vicinity']
-    })
-}
-</script>
-<script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRAziCbvwi_tnshs3g2uM6WCvdvdvOTL4&libraries=places&callback=initAutocomplete">
-</script>
-<!--scripts for google autocomplete ending-->
+<script src="/javascript/add-lead.js" ></script>

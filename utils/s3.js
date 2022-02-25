@@ -5,6 +5,7 @@ require('dotenv').config();
 // require native node fs
 const fs = require('fs');
 
+
 // create variables from .env s3 information
 const bucketName = process.env.AWS_BUCKET_NAME;
 // the bottom three are used in the s3 instance
@@ -23,7 +24,7 @@ const s3 = new S3({
 
 // this will upload a file to my S3 bucket
 function s3Upload(file) {
-    const fileStream = fs.createReadStream(file,path);
+    const fileStream = fs.createReadStream(file.path);
 
     const uploadParams = {
         Bucket: bucketName,
