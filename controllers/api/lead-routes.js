@@ -9,6 +9,16 @@ const {s3Upload} = require('../../utils/s3');
 
 router.post('/',video_upload.single('walk-through-video'),async (req,res) => {
     console.log(req.file);
+    const body = req.body
+    console.log(body.first_name);
+  
+    console.log(body.last_name);
+  
+    console.log(body.email);
+  
+    console.log(body.address);
+  
+
     //const result = await s3Upload(req.file);
     //console.log(result);
     /*Lead.create({

@@ -10,7 +10,8 @@ async function newLeadHandler(event) {
  const address = document.querySelector('input[name="address"]').value;
  const walk_through_video = document.querySelector('input[name="walk-through-video"]').files[0];*/
 const form = document.querySelector('#lead-submit-form');
-const formData = new FormData(form)
+const formData = new FormData(form);
+console.log(formData);
  const response = await fetch('/api/leads',{
      method: 'POST',
      body: formData
