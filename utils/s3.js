@@ -23,13 +23,13 @@ const s3 = new S3({
 })
 
 // this will upload a file to my S3 bucket
-function s3Upload(file) {
-    const fileStream = fs.createReadStream(file.path);
+function s3Upload(video_file) {
+    const fileStream = fs.createReadStream(video_file.path);
 
     const uploadParams = {
         Bucket: bucketName,
         Body: fileStream,
-        Key: file.filename
+        Key: video_file.filename
     }
     return s3.upload(uploadParams).promise();
 };

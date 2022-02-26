@@ -8,15 +8,20 @@ var video_upload = multer({dest: 'lead-uploads/'});
 const {s3Upload} = require('../../utils/s3');
 
 router.post('/',video_upload.single('walk-through-video'),async (req,res) => {
-    console.log(req.file);
-    const body = req.body
+    const video_file = req.file;
+    console.log(video_file);
+    // use s3 function to upload file to s3
+    const walk_through_video = await s3Upload(video_file);
+    console.log(walk_through_video.key);
+    
+    /*const body = req.body
     console.log(body.first_name);
   
     console.log(body.last_name);
   
     console.log(body.email);
   
-    console.log(body.address);
+    console.log(body.address);*/
   
 
     //const result = await s3Upload(req.file);
