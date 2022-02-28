@@ -35,7 +35,16 @@ function s3Upload(video_file) {
 };
 
 // this will download a file from S3 bucket
+function getS3Video(videoKey) {
+    const downloadParams = {
+        Key: videoKey,
+        Bucket: bucketName
+    }
+  
+
+    return s3.getObject(downloadParams).createReadStream();
+};
 
 
 
-module.exports = {s3Upload};
+module.exports = {s3Upload,getS3Video};
