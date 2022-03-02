@@ -2,11 +2,15 @@ const router = require('express').Router();
 const apiRoutes = require('./api');
 const homeRoutes = require('./home-routes');
 const getImage = require('./get-image-route');
+const adminRoutes = require('./admin-routes');
 
-//consume get-image-route
+// consume and prefix admin-routes
+router.use('/admin',adminRoutes);
+
+//consume and prefix get-image-route
 router.use('/images',getImage);
 
-// consume api routes
+// consume and prefix api routes
 router.use('/api',apiRoutes);
 
 // consume home routes
