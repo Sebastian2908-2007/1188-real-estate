@@ -7,12 +7,33 @@ var video_upload = multer({dest: 'lead-uploads/'});
 // import function that uploads to the s3 bucket
 const {s3Upload} = require('../../utils/s3');
 
+// get all leads
 router.get('/',(req,res) => {
     Lead.findAll()
     .then(dbLeadData => res.json(dbLeadData))
     .catch(err => {
         console.log(err);
         res.status(500).json(err);
+    });
+});
+
+// get lead by id
+router.get('/:id',(req,res) => {
+    Lead.findOne({
+        where: {
+            id: req.params.id
+        }
+    })
+    .then(dbLeadData => {
+        if(!dbLeadData) {
+            res.status(404).json({message: 'no lead with that id!'});
+            return;
+        }
+        res.json(dbLeadData);
+    })
+    .catch(err => {
+      console.log(err),
+      res.status(500).json(err);
     });
 });
 
@@ -24,15 +45,6 @@ router.post('/',video_upload.single('walk-through-video'),async (req,res) => {
     const walk_through_video = await s3Upload(video_file);
     console.log(walk_through_video.Key);
     
-    /*const body = req.body
-    console.log(body.first_name);
-  
-    console.log(body.last_name);
-  
-    console.log(body.email);
-  
-    console.log(body.address);*/
-  
     Lead.create({
        first_name: req.body.first_name,
        last_name: req.body.last_name,
@@ -51,6 +63,46 @@ router.post('/',video_upload.single('walk-through-video'),async (req,res) => {
         console.log(err);
         res.status(500).json(err);
     });
+});
+
+// update a lead
+router.put('/:id',(req,res) => {
+    Lead.update(req.body, {
+        where: {
+            id: req.params.id
+        }
+     })
+    .then(dbLeadData => {
+        if(!dbLeadData[0]) {
+            res.status(404).json({message: 'no lead found with that id'});
+            return;
+        }
+        res.json(dbLeadData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
+// delete a lead
+router.delete('/:id',(req,res) => {
+    Lead.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+    .then(dbLeadData => {
+        if(!dbLeadData) {
+            res.status(404).json({message: 'no lead found with that id!!!'});
+            return;
+        }
+        res.json(dbLeadData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    })
 });
 
 module.exports = router;
