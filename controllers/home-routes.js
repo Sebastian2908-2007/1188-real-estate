@@ -17,6 +17,11 @@ router.get('/get-cash-offer',(req,res) => {
    res.render('lead-page');
 });
 
+// this renders the user-login page
+router.get('/login',(req,res) => {
+   res.render('user-login');
+});
+
 
 // this will render the user-blog page it will include a call to database to retrieve post info
 router.get('/user-blog',(req,res) => {
