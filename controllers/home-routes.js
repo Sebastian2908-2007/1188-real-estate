@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const {Post,User} = require('../models');
+const authorize_user = require('../utils/autorize-user');
 
 // this will render the homepage
 router.get('/',(req,res) => {
@@ -28,6 +29,7 @@ router.get('/user-blog',(req,res) => {
     })
     .then(dbPostData => {
        const posts = dbPostData.map(post => post.get({plain: true}));
+       console.log(req.session.loggedIn);
        res.render('user-blog',{posts, loggedIn: req.session.loggedIn});
     })
     .catch(err => {
