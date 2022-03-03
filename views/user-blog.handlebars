@@ -1,0 +1,31 @@
+<div>
+<section id="user-blog-form-section">
+<div>
+    <h1>Do You Have Any Thoughts And feelings Or Insights About Your Local Real Estate Market?</h1>
+    <p>We here at 1188 real estate love hearing from "the folks on the ground" So to speak, as we find this type of market feedback to be highly valuable. So please don't be shy share your experience with us!</p>
+</div>
+<form id="new-post-form">
+ <div>
+   <label for="new-post">Share Your Insights</label>
+   <input type="text" id="new-post" />
+ </div>
+  <div>
+      <button class="new-post-button">Create Post</button>
+  </div>
+
+</form>
+</section>
+
+{{#if posts.length}}
+<section class="user-blog-post-section">
+ <h2>Posts</h2>
+ <ol>
+     {{#each posts as |post|}}
+     <li>
+         {{> post-info post}}
+     </li>
+     {{/each}}
+ </ol>
+</section>
+{{/if}}
+</div>
