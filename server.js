@@ -7,10 +7,12 @@ const sequelize = require('./config/connection');
 const app = express();
 // configuring port
 const PORT = process.env.PORT || 3001;
+// import helper functions from utils for handlebars
+const helpers = require('./utils/helpers');
 // require express handlebars
 const exphbs = require('express-handlebars');
 // activate handlebars and pass in any helper functions
-const hbs = exphbs.create({});
+const hbs = exphbs.create({helpers});
 // getting all routes for use in as middlewear
 const routes = require('./controllers');
 // require express session this allows us to create sessions
