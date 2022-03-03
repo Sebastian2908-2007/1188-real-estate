@@ -12,9 +12,15 @@
             <ul>
                  <li><a href="/get-cash-offer">Get Cash Offer</a></li>
                 <li><a href="/create-user-account">Create an Account</a></li>
-                <li><a>Posts</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/user-blog">Posts</a></li>
                 <li><a>Reviews</a></li>
             </ul>
+           {{#if loggedIn}} 
+            <div>
+                <button type="button" id="logout">logout</button>
+            </div>
+            {{/if}}
         </nav>
     </header>
     <main> 
@@ -34,4 +40,7 @@
         </div>
     </footer>
 </body>
+{{#if loggedIn}}
+<script src="/javascript/logout.js"></script>
+{{/if}}
 </html>
