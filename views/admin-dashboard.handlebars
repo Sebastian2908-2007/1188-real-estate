@@ -5,7 +5,7 @@
 {{> lead-info lead}}
 <div>
     <a href="/admin/edit/lead/{{lead.id}}">edit lead</a>
-    <button type="button" class="delete-btn">delete lead</button>
+    <button type="button"  id="delete-lead-btn" class="delete-btn" data-id="{{lead.id}}">delete lead</button>
 </div>
 {{/each}}
 {{/if}}
@@ -36,5 +36,8 @@
 {{/each}}
 {{/if}}
 </section>
+{{#if leads.length}}
+<script src="/javascript/delete-lead.js"></script>
+{{/if}}
 
 
