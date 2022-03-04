@@ -16,7 +16,7 @@ function navList() {
 function footerList() {
     const footerList = document.querySelector('#footer-list');
     if(path[1] === 'admin') {
-        footerList.innerHTML = "<li><a>Aloha!</a></li>";
+        footerList.innerHTML = " ";
       }
 
 };

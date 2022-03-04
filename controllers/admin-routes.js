@@ -2,10 +2,55 @@ const router = require('express').Router();
 const {Lead,Review,Post,User} = require('../models');
 require('dotenv').config();
 
-// this route renders the admin/dashboard
+// these three routes renders the admin/dashboard======================================
 router.get('/dashboard',(req,res) => {
-    res.render('admin-dashboard');
+    let adminData = [];
+    Lead.findAll({})
+    .then(dbLeadData => {
+        const leads = dbLeadData.map(lead => lead.get({plain: true}));
+       adminData.push(leads)
+    }).then(() => {
+        Review.findAll({
+            include:{
+                model: User,
+                attributes:['username','state']
+            }
+        }).then(dbReviewData => {
+            const reviews = dbReviewData.map(review => review.get({plain: true}));
+            adminData.push(reviews);
+        })
+        .then(() => {
+            Post.findAll({
+                include: { 
+                model: User,
+                attributes:['username','state'] 
+                }
+            })
+            .then(dbPostData => {
+                const posts = dbPostData.map(post => post.get({plain: true}));
+                adminData.push(posts);
+                
+                const leads = adminData[0];
+                
+                const reviews = adminData[1];
+                
+                const posts2 = adminData[2];
+                
+                res.render('admin-dashboard',{leads,reviews,posts2,loggedIn: req.session.loggedIn})
+            })
+        })
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+   
 });
+
+
+
+
+// these three routes renders the admin/dashboard ===============================up
 
 // this is thhe route for logging in the administrator
 router.post('/login',(req,res) => {
