@@ -44,7 +44,7 @@ router.get('/:id',(req,res) => {
 router.post('/',authorize_user,(req,res) => {
   Review.create({
       review_text: req.body.review_text,
-      user_id: req.body.user_id
+      user_id: req.session.user_id
   })
   .then(dbReviewData => {
       if(!dbReviewData) {
