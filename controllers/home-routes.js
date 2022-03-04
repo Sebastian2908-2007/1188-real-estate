@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {Post,User} = require('../models');
+const {Post,User, Review} = require('../models');
 const authorize_user = require('../utils/autorize-user');
 
 // this will render the homepage
@@ -34,13 +34,31 @@ router.get('/user-blog',(req,res) => {
     })
     .then(dbPostData => {
        const posts = dbPostData.map(post => post.get({plain: true}));
-       console.log(req.session.loggedIn);
        res.render('user-blog',{posts, loggedIn: req.session.loggedIn});
     })
     .catch(err => {
        console.log(err);
        res.status(500).json(err);
     });
+});
+
+// this renders the user-review page and will include call to retrieve review data
+router.get('/user-reviews',(req,res) => {
+   Review.findAll({
+      order:[['created_at', 'DESC']],
+      include: {
+         model: User,
+         attributes:['username','state']
+      }
+   })
+   .then(dbReviewData => {
+      const reviews = dbReviewData.map(review => review.get({plain: true}));
+      res.render('user-review',{reviews, loggedIn: req.session.loggedIn});
+   })
+   .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+   });
 });
 
 module.exports = router;

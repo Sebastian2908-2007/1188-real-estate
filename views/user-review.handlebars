@@ -1,0 +1,33 @@
+<div>
+<section id="user-review-form-section">
+<div>
+    <h1>Have You Done A deal With Us ?</h1>
+    <p>We value every client experience and love providing a place for clients to tell the world. So please tell the world you experience with 1188 real estate!</p>
+</div>
+{{#if loggedIn}}
+<form id="new-review-form">
+ <div>
+   <label for="new-review">Share Your Insights</label>
+   <input type="text" id="new-review" />
+ </div>
+  <div>
+      <button class="new-review-button">Create review</button>
+  </div>
+
+</form>
+{{/if}}
+</section>
+
+{{#if reviews.length}}
+<section class="user-blog-review-section">
+ <h2>reviews</h2>
+ <ol>
+     {{#each reviews as |review|}}
+     <li>
+         {{> review-info review}}
+     </li>
+     {{/each}}
+ </ol>
+</section>
+{{/if}}
+</div>
