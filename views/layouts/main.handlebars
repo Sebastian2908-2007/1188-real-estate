@@ -11,7 +11,7 @@
         <h1><a href="/">1188RE</a></h1>
         <nav>
             {{#if loggedIn}} 
-            <ul>
+            <ul id="nav-list">
                 <li><a href="/get-cash-offer">Get Cash Offer</a></li>
                 <li><a href="/user-blog">Posts</a></li>
                 <li><a href="/user-reviews">Reviews</a></li>
@@ -22,7 +22,7 @@
             </div>
             
             {{else}}
-            <ul>
+            <ul id="nav-list">
                 <li><a href="/get-cash-offer">Get Cash Offer</a></li>
                 <li><a href="/create-user-account">Create an Account</a></li>
                 <li><a href="/login">Login</a></li>
@@ -38,7 +38,7 @@
     </main>
     <footer>
         <div>
-         <ul>
+         <ul id="footer-list">
              <li><a>Privacy Policy</a></li>
              <li><a>Terms of Use</a></li>
          </ul>   
@@ -53,4 +53,5 @@
 {{#if loggedIn}}
 <script src="/javascript/user-logout.js"></script>
 {{/if}}
+<script src='/javascript/admin-nav-footer.js'></script>
 </html>

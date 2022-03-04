@@ -1,5 +1,11 @@
 const router = require('express').Router();
+const {Lead,Review,Post,User} = require('../models');
 require('dotenv').config();
+
+// this route renders the admin/dashboard
+router.get('/dashboard',(req,res) => {
+    res.render('admin-dashboard');
+});
 
 // this is thhe route for logging in the administrator
 router.post('/login',(req,res) => {
@@ -32,5 +38,6 @@ router.post('/logout',(req,res) => {
         res.status(404).end();
     }
 });
+
 
 module.exports = router;
