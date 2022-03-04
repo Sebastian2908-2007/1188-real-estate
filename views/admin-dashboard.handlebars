@@ -2,7 +2,11 @@
 <section>
 {{#if leads.length}}
 {{#each leads as |lead|}}
-<div>{{> lead-info lead}}</div>
+{{> lead-info lead}}
+<div>
+    <a href="/admin/edit/lead/{{lead.id}}">edit lead</a>
+    <button type="button" class="delete-btn">delete lead</button>
+</div>
 {{/each}}
 {{/if}}
 </section>
@@ -11,7 +15,11 @@
 <section>
 {{#if reviews.length}}
 {{#each reviews as |review|}}
-<div>{{> review-info review}}</div>
+{{> review-info review}}
+<div>
+    <a href="/admin/edit/review/{{review.id}}" >edit review</a>
+    <button type="button" class="delete-btn">delete review</button>
+</div>
 {{/each}}
 {{/if}}
 </section>
@@ -20,7 +28,11 @@
 <section>
 {{#if posts2.length}}
 {{#each posts2 as |post|}}
-<div>{{> post-info post}}</div>
+{{> post-info post}}
+<div>
+    <a href="/admin/edit/post/{{post.id}}"  >edit post</a>
+    <button type="button" class="delete-btn">delete post</button>
+</div>
 {{/each}}
 {{/if}}
 </section>

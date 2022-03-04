@@ -1,8 +1,7 @@
 const router = require('express').Router();
 const {Lead,Review,Post,User} = require('../models');
 require('dotenv').config();
-
-// these three routes renders the admin/dashboard======================================
+// this route renders the admin dashboard with lead,review and post data
 router.get('/dashboard',(req,res) => {
     let adminData = [];
     Lead.findAll({})
@@ -50,7 +49,20 @@ router.get('/dashboard',(req,res) => {
 
 
 
-// these three routes renders the admin/dashboard ===============================up
+// this is the edit lead page route
+router.get('/edit/lead/:id',(req,res) => {
+    res.render('edit-lead');
+});
+
+// this is the edit review page route
+router.get('/edit/review/:id',(req,res) => {
+    res.render('edit-review');
+});
+
+// this is the edit post page route
+router.get('/edit/post/:id',(req,res) => {
+    res.render('edit-post');
+});
 
 // this is thhe route for logging in the administrator
 router.post('/login',(req,res) => {
