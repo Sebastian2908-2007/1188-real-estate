@@ -51,7 +51,20 @@ router.get('/dashboard',(req,res) => {
 
 // this is the edit lead page route
 router.get('/edit/lead/:id',(req,res) => {
-    res.render('edit-lead');
+    Lead.findOne({
+        where: {
+            id: req.params.id 
+        }
+    })
+    .then(dbLeadData => {
+        const lead = dbLeadData.get({palin: true});
+        res.render('edit-lead',{lead,loggedIn: req.session.loggedIn});
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    })
+  
 });
 
 // this is the edit review page route

@@ -1,1 +1,24 @@
-<div>this is edit lead</div>
+<form id="lead-edit-form" action="/get-cash-offer" method="post" enctype="multipart/form-data">
+<div> 
+  <label for="first-name" name="first_name"></label>
+  <input type="text" name="first_name" placeholder="{{lead.first_name}}" />
+ </div> 
+<div> 
+  <label for="last-name" name="last_name"></label>
+  <input type="text" name="last_name" placeholder="{{lead.last_name}}"/>
+ </div> 
+<div> 
+  <label for="email" name="email"></label>
+  <input type="email" name="email" placeholder="{{lead.email}}" />
+ </div> 
+<div> 
+  <label  for="address" name="address"></label>
+  <input id="autocomplete" placeholder="{{lead.address}}" type="text" name="address" />
+ </div> 
+<div>
+ <button type="submit" >Submit</button>
+ <button id="delete-lead-btn" type="button" >delete</button>
+</div>
+
+</form>
+<script src="/javascript/edit-lead.js"></script>
