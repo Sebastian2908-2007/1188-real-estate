@@ -10,18 +10,27 @@
     <header>
         <h1><a href="/">1188RE</a></h1>
         <nav>
+            {{#if loggedIn}} 
             <ul>
-                 <li><a href="/get-cash-offer">Get Cash Offer</a></li>
-                <li><a href="/create-user-account">Create an Account</a></li>
-                <li><a href="/login">Login</a></li>
+                <li><a href="/get-cash-offer">Get Cash Offer</a></li>
                 <li><a href="/user-blog">Posts</a></li>
-                <li><a>Reviews</a></li>
+                <li><a href="/user-reviews">Reviews</a></li>
             </ul>
-           {{#if loggedIn}} 
+            
             <div>
                 <button type="button" id="logout">logout</button>
             </div>
+            
+            {{else}}
+            <ul>
+                <li><a href="/get-cash-offer">Get Cash Offer</a></li>
+                <li><a href="/create-user-account">Create an Account</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/user-blog">Posts</a></li>
+                <li><a href="/user-reviews">Reviews</a></li>
+            </ul>
             {{/if}}
+            
         </nav>
     </header>
     <main> 

@@ -4,7 +4,7 @@ const authorize_user = require('../utils/autorize-user');
 
 // this will render the homepage
 router.get('/',(req,res) => {
-   res.render('homepage');
+   res.render('homepage',{loggedIn: req.session.loggedIn});
 });
 
 // this will render the create new user account page
@@ -14,7 +14,7 @@ router.get('/create-user-account',(req,res) => {
 
 // this will render the lead form page
 router.get('/get-cash-offer',(req,res) => {
-   res.render('lead-page');
+   res.render('lead-page',{loggedIn: req.session.loggedIn});
 });
 
 // this renders the user-login page
