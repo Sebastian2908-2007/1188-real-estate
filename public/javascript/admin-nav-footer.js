@@ -3,11 +3,14 @@
 const path = window.location.pathname.split('/');
 
 function navList() {
-    console.log(path[1]);
+  // get logout button in nav
+  const adminLogoutBtn = document.querySelector('#logout');
     // getting the nav ul by it's id
     const navList = document.querySelector('#nav-list');
   if(path[1] === 'admin') {
     navList.innerHTML = "<li><a>Users</a></li>";
+    // change id of logout button on admin side
+    adminLogoutBtn.setAttribute('id',"admin-logout");
   }
     
    
