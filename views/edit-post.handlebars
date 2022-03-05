@@ -1,1 +1,17 @@
-<div>this is edit post</div>
+<section>
+    <form id="edit-post-form">
+        <div>
+     <h1>By {{post.user.username}} From {{post.user.state}}</h1>
+        </div>
+         <div>
+     <label for="post-text"></label>
+     <textarea id="post-text" placeholder="{{post.post_text}}" ></textarea>
+        </div>
+         <div>
+         <button type="submit">Save</button>
+         <button type="click" id="delete-post-button" data-id="{{post.id}}">Delete</button>
+         </div>
+    </form>
+    </section>
+    <script src="/javascript/edit-post.js"></script>
+    <script src="/javascript/delete-post.js"></script>

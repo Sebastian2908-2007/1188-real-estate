@@ -31,7 +31,7 @@
 {{> post-info post}}
 <div>
     <a href="/admin/edit/post/{{post.id}}"  >edit post</a>
-    <button type="button" class="delete-btn">delete post</button>
+    <button id="delete-post-button" type="button" class="delete-btn">delete post</button>
 </div>
 {{/each}}
 {{/if}}
@@ -41,6 +41,9 @@
 {{/if}}
 {{#if reviews.length}}
 <script src="/javascript/delete-review.js"></script>
+{{/if}}
+{{#if posts2.length}}
+<script src="/javascript/delete-post.js"></script>
 {{/if}}
 
 

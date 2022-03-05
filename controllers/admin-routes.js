@@ -90,7 +90,23 @@ router.get('/edit/review/:id',(req,res) => {
 
 // this is the edit post page route
 router.get('/edit/post/:id',(req,res) => {
-    res.render('edit-post');
+    Post.findOne({
+        where: {
+            id: req.params.id 
+        }, 
+        include: {
+            model: User,
+            attributes: ['username','state']
+        }
+    })
+    .then(dbPostData => {
+        const post = dbPostData.get({plain: true});
+        res.render('edit-post',{post, loggedIn: req.session.loggedIn})
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
 // this is thhe route for logging in the administrator

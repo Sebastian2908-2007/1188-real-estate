@@ -61,7 +61,7 @@ router.post('/',authorize_user,(req,res) => {
 });
 
 // update a post
-router.put('/:id',authorize_user,(req,res) => {
+router.put('/:id',(req,res) => {
     Post.update(req.body, {
         where: {
             id: req.params.id
@@ -81,7 +81,7 @@ router.put('/:id',authorize_user,(req,res) => {
 });
 
 // delete a post
-router.delete('/:id',authorize_user,(req,res) => {
+router.delete('/:id',(req,res) => {
     Post.destroy({
         where: {
             id: req.params.id
