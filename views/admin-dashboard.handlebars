@@ -18,7 +18,7 @@
 {{> review-info review}}
 <div>
     <a href="/admin/edit/review/{{review.id}}" >edit review</a>
-    <button type="button" class="delete-btn">delete review</button>
+    <button id="delete-review-button" type="button" class="delete-btn" data-id="{{review.id}}">delete review</button>
 </div>
 {{/each}}
 {{/if}}
@@ -38,6 +38,9 @@
 </section>
 {{#if leads.length}}
 <script src="/javascript/delete-lead.js"></script>
+{{/if}}
+{{#if reviews.length}}
+<script src="/javascript/delete-review.js"></script>
 {{/if}}
 
 

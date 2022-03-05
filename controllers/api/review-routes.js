@@ -60,7 +60,7 @@ router.post('/',authorize_user,(req,res) => {
 });
 
 // update a review
-router.put('/:id',authorize_user,(req,res) => {
+router.put('/:id',(req,res) => {
     Review.update(req.body, {
         where: {
             id: req.params.id
@@ -68,7 +68,7 @@ router.put('/:id',authorize_user,(req,res) => {
     })
     .then(dbReviewData => {
         if(!dbReviewData[0]) {
-            res.status(404).jsonp({message: 'sorry no review found with thst id'});
+            res.status(404).json({message: 'sorry no review found with thst id'});
             return;
         }
         res.json(dbReviewData);
@@ -79,8 +79,8 @@ router.put('/:id',authorize_user,(req,res) => {
     });
 });
 
-// delete a review
-router.delete('/:id',authorize_user,(req,res) => {
+// delete a review // took authorize user middleware out put back later also on the update route
+router.delete('/:id',(req,res) => {
     Review.destroy({
         where: {
             id: req.params.id 

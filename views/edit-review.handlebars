@@ -1,1 +1,17 @@
-<div>this is edit review</div>
+<section>
+    <form id="edit-review-form">
+        <div>
+     <h1>By {{review.user.username}} From {{review.user.state}}</h1>
+        </div>
+         <div>
+     <label for="review-text"></label>
+     <textarea id="review-text" placeholder="{{review.review_text}}" ></textarea>
+        </div>
+         <div>
+         <button type="submit">Save</button>
+         <button type="click" id="delete-review-button" data-id="{{review.id}}">Delete</button>
+         </div>
+    </form>
+</section>
+<script src="/javascript/edit-review.js"></script>
+<script src="/javascript/delete-review.js"></script>

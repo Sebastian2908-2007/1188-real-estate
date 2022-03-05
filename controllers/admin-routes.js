@@ -57,7 +57,7 @@ router.get('/edit/lead/:id',(req,res) => {
         }
     })
     .then(dbLeadData => {
-        const lead = dbLeadData.get({palin: true});
+        const lead = dbLeadData.get({plain: true});
         res.render('edit-lead',{lead,loggedIn: req.session.loggedIn});
     })
     .catch(err => {
@@ -69,7 +69,23 @@ router.get('/edit/lead/:id',(req,res) => {
 
 // this is the edit review page route
 router.get('/edit/review/:id',(req,res) => {
-    res.render('edit-review');
+    Review.findOne({
+        where: {
+            id: req.params.id
+        },
+        include: {
+            model: User,
+            attributes:['username','state']
+        }
+    })
+    .then(dbReviewData => {
+        const review = dbReviewData.get({plain: true})
+        res.render('edit-review',{review, loggedIn: req.session.loggedIn});
+    })
+   .catch(err => {
+       console.log(err);
+       res.status(500).json(err);
+   });
 });
 
 // this is the edit post page route
