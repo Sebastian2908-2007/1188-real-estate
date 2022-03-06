@@ -1,0 +1,16 @@
+<section>
+ {{#if users.length}}
+ {{#each users as |user|}}
+ <div>
+     <div id="user-info" data-user-id="{{user.id}}"> 
+     <span>{{user.username}}</span>
+     <span>{{user.state}}</span>
+     <span>{{user.email}}</span>
+    </div>
+    <div>
+        <button id="delete-user-btn" type="button">Delete</button>
+    </div> 
+ </div>
+ {{/each}}
+ {{/if}}
+</section>

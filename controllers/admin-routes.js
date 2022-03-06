@@ -115,5 +115,19 @@ router.get('/login',(req,res) => {
     res.render('admin-login');
 });
 
+// this will render single users page where users can be edited by the admin
+router.get('/users',(req,res) => {
+    User.findAll({})
+    .then(dbUserData => {
+        const users = dbUserData.map(user => user.get({plain: true}));
+        res.render('admin-users',{users, loggedIn: req.session.loggedIn});
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+  
+});
+
 
 module.exports = router;
