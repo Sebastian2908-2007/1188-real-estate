@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const {Lead,Review,Post,User} = require('../models');
 require('dotenv').config();
+const authorize = require('../utils/autorize-user');
 // this route renders the admin dashboard with lead,review and post data
-router.get('/dashboard',(req,res) => {
+router.get('/dashboard',authorize,(req,res) => {
     let adminData = [];
     Lead.findAll({})
     .then(dbLeadData => {
@@ -50,7 +51,7 @@ router.get('/dashboard',(req,res) => {
 
 
 // this is the edit lead page route
-router.get('/edit/lead/:id',(req,res) => {
+router.get('/edit/lead/:id',authorize,(req,res) => {
     Lead.findOne({
         where: {
             id: req.params.id 
@@ -68,7 +69,7 @@ router.get('/edit/lead/:id',(req,res) => {
 });
 
 // this is the edit review page route
-router.get('/edit/review/:id',(req,res) => {
+router.get('/edit/review/:id',authorize,(req,res) => {
     Review.findOne({
         where: {
             id: req.params.id
@@ -89,7 +90,7 @@ router.get('/edit/review/:id',(req,res) => {
 });
 
 // this is the edit post page route
-router.get('/edit/post/:id',(req,res) => {
+router.get('/edit/post/:id',authorize,(req,res) => {
     Post.findOne({
         where: {
             id: req.params.id 

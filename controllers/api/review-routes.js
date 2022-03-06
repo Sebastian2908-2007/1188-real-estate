@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const {Review,User} = require('../../models');
-const authorize_user = require('../../utils/autorize-user');
+const authorize_user = require('../../utils/authorize-public-user');
 
 router.get('/',(req,res) => {
     Review.findAll({

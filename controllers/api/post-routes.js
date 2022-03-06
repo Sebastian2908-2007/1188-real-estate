@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const {User,Post} = require('../../models');
-const authorize_user = require('../../utils/autorize-user');
+const authorize_user = require('../../utils/authorize-public-user');
 
 // get all posts
 router.get('/',(req,res) => {
