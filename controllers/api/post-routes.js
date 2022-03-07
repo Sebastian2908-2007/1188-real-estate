@@ -43,6 +43,7 @@ router.get('/:id',(req,res) => {
 
 // create a post
 router.post('/',authorize_user,(req,res) => {
+    console.log(req.body.post_text);
     Post.create({
         post_text: req.body.post_text,
         user_id: req.session.user_id

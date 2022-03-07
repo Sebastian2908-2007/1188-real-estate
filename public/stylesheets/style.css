@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: yellowgreen;
+}
+
+header {
+    background-color:rgb(99, 158, 9); 
+}
+
+a {
+    text-decoration: none;
+}
+
+header h1 a {
+    color: white;
+}
+
+header nav a {
+    color: white;  
+}
+
+footer {
+    background-color:rgb(99, 158, 9); 
+    height: 7vh;
+    color: white;
+}
+
+/*the following styles style both user and admin login forms*/
+
+#user-login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 35vh;
+    margin-top: 11%;
+    margin-bottom: 78%;
+}
+
+.label-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 8%;
+}
+
+.label-input-container input {
+    width: 100%;
+    padding: 3%;
+}
+
+.label-input-container label {
+    color: white;
+    font-size: 2em;
+}
+
+.login-btn {
+    padding: 18% ;
+    color: white;
+    background-color: rgb(99, 158, 9);
+    font-size: 1.33em;
+}
