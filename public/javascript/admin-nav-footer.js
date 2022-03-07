@@ -5,8 +5,11 @@ const path = window.location.pathname.split('/');
 function navList() {
     // getting the nav ul by it's id
     const navList = document.querySelector('#nav-list');
+    const headerTitle = document.querySelector('#header-title');
   if(path[1] === 'admin') {
     navList.innerHTML = "<li><a href='/admin/users'>Users</a></li>";
+    headerTitle.setAttribute('href', '/admin/dashboard');
+    headerTitle.textContent = 'Admin Dashboard';
     // change id of logout button on admin side
   }
     

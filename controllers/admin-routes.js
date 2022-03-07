@@ -115,8 +115,8 @@ router.get('/login',(req,res) => {
     res.render('admin-login');
 });
 
-// this will render single users page where users can be edited by the admin
-router.get('/users',(req,res) => {
+// this will render single users page where users can be seen by the admin
+router.get('/users',authorize,(req,res) => {
     User.findAll({})
     .then(dbUserData => {
         const users = dbUserData.map(user => user.get({plain: true}));
@@ -129,5 +129,20 @@ router.get('/users',(req,res) => {
   
 });
 
+router.get('/delete/:id',authorize,(req,res) => {
+    User.findOne({
+        where: {
+            id: req.params.id 
+        }
+    })
+    .then(dbUserData => {
+        const user = dbUserData.get({plain: true});
+        res.render('delete-user',{user, loggedIn: req.session.loggedIn});
+    })
+    .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+    });
+});
 
 module.exports = router;

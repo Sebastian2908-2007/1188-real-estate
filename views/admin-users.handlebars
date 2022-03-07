@@ -2,13 +2,13 @@
  {{#if users.length}}
  {{#each users as |user|}}
  <div>
-     <div id="user-info" data-user-id="{{user.id}}"> 
+     <div> 
      <span>{{user.username}}</span>
      <span>{{user.state}}</span>
      <span>{{user.email}}</span>
     </div>
     <div>
-        <button id="delete-user-btn" type="button">Delete</button>
+        <a href="/admin/delete/{{user.id}}">Delete</a>
     </div> 
  </div>
  {{/each}}

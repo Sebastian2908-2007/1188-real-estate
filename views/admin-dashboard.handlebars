@@ -5,7 +5,6 @@
 {{> lead-info lead}}
 <div>
     <a href="/admin/edit/lead/{{lead.id}}">edit lead</a>
-    <button type="button"  id="delete-lead-btn" class="delete-btn" data-id="{{lead.id}}">delete lead</button>
 </div>
 {{/each}}
 {{/if}}
@@ -18,7 +17,6 @@
 {{> review-info review}}
 <div>
     <a href="/admin/edit/review/{{review.id}}" >edit review</a>
-    <button id="delete-review-button" type="button" class="delete-btn" data-id="{{review.id}}">delete review</button>
 </div>
 {{/each}}
 {{/if}}
@@ -31,21 +29,12 @@
 {{> post-info post}}
 <div>
     <a href="/admin/edit/post/{{post.id}}"  >edit post</a>
-    <button id="delete-post-button" type="button" class="delete-btn">delete post</button>
 </div>
 {{/each}}
 {{/if}}
 </section>
 
-{{#if leads.length}}
-<script src="/javascript/delete-lead.js"></script>
-{{/if}}
-{{#if reviews.length}}
-<script src="/javascript/delete-review.js"></script>
-{{/if}}
-{{#if posts2.length}}
-<script src="/javascript/delete-post.js"></script>
-{{/if}}
+
 
 
 
