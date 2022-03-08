@@ -10,7 +10,8 @@ function navList() {
     navList.innerHTML = "<li><a href='/admin/users'>Users</a></li>";
     headerTitle.setAttribute('href', '/admin/dashboard');
     headerTitle.textContent = 'Admin Dashboard';
-    // change id of logout button on admin side
+    // change #dropdown to margin-right 20% when on admin side
+    document.getElementById('dropdown').style.margin = '0 20% 0 0';
   }
     
    
