@@ -10,7 +10,14 @@
 <body>
     <header>
         <h1><a id="header-title" href="/">1188RE</a></h1>
-        <nav>
+        <div id="dropdown">
+            <button id="dropdown-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        <nav id="dropdown-content">
             {{#if loggedIn}} 
             <ul id="nav-list">
                 <li><a href="/get-cash-offer">Get Cash Offer</a></li>
@@ -33,6 +40,7 @@
             {{/if}}
             
         </nav>
+        </div>
     </header>
     <main> 
     {{{ body }}}
