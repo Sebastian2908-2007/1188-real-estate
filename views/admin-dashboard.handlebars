@@ -1,35 +1,29 @@
 <!--lead section-->
-<section>
+<section class="admin-section">
+     <h1>Leads</h1>
 {{#if leads.length}}
 {{#each leads as |lead|}}
 {{> lead-info lead}}
-<div>
-    <a href="/admin/edit/lead/{{lead.id}}">edit lead</a>
-</div>
 {{/each}}
 {{/if}}
 </section>
 
 <!--reviews section-->
-<section>
+<section class="admin-section">
+     <h1>Reviews</h1>
 {{#if reviews.length}}
 {{#each reviews as |review|}}
 {{> review-info review}}
-<div>
-    <a href="/admin/edit/review/{{review.id}}" >edit review</a>
-</div>
 {{/each}}
 {{/if}}
 </section>
 
 <!--posts section-->
-<section>
+<section class="admin-section">
+     <h1>Posts</h1>
 {{#if posts2.length}}
 {{#each posts2 as |post|}}
 {{> post-info post}}
-<div>
-    <a href="/admin/edit/post/{{post.id}}"  >edit post</a>
-</div>
 {{/each}}
 {{/if}}
 </section>

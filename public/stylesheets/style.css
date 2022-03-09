@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: rgb(58, 94, 4);
 }
 
 body {
@@ -80,7 +81,7 @@ a {
 /*dropdown nav styles end*/
 
 
-
+/*footer styles begin*/
 footer {
     background-color:rgb(99, 158, 9); 
     height: 9vh;
@@ -112,6 +113,11 @@ footer {
 #copyright-div {
     padding: .25em;
 }
+
+#copyright-div p {
+    font-size: 1.18em;
+}
+/*footer styles end*/
 
 
 /*the following styles style both user and admin login forms*/
@@ -152,3 +158,85 @@ footer {
     border: 3px solid white;
     border-radius: 2px;
 }
+/*login form styles end*/
+
+/*admin dashboard styles begin*/
+.admin-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8%;
+    align-items: center;
+    
+}
+.admin-section h1 {
+    margin-bottom: 11%;
+    border-bottom: 2px solid rgb(99, 158, 9);
+    font-size: 3em;
+}
+
+/*lead section admin starts*/
+.lead-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.lead-info span {
+    margin: 2px;
+    color: white;
+    font-size: 1.28em;
+    padding: 4%;
+}
+
+#lead-info-container {
+    border-bottom: 3px solid rgb(99, 158, 9);
+}
+
+video {
+    margin-bottom: 8%;
+}
+
+/*lead section admin ends*/
+
+/*review and post sections admin start*/
+.review-post-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-bottom: 2px solid rgb(99, 158, 9);
+}
+
+.review-post-container h2 {
+    color: white;
+    font-size: 2.46em;
+}
+
+.review-post-container p {
+    color: white;
+    font-size: 1.55em;
+}
+
+.review-post-container h2 {
+    margin-bottom: 8%;
+}
+
+.review-post-container p {
+    margin-bottom: 8%;
+}
+/*review and post sections admin end*/
+.link-div {
+    margin-top:2%;
+    margin-bottom: 5%;
+}
+
+.link-div a {
+    color: rgb(58, 94, 4);
+    font-size: 1.28em;
+}
+
+/*admin dashboard styles end*/

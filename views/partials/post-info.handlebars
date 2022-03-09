@@ -1,4 +1,7 @@
-<div>
-    <h1>By: {{user.username}} From:{{user.state}} On: {{ format_date createdAt}}</h1>
+<div class="review-post-container">
+    <h2>By: {{user.username}} From:{{user.state}} On: {{ format_date createdAt}}</h2>
     <p>{{post_text}}</p>
+    <div class="link-div">
+    <a href="/admin/edit/post/{{id}}">edit post</a>
+   </div>
 </div>
