@@ -1,5 +1,5 @@
-<section>
-<form id="lead-edit-form" action="/get-cash-offer" method="post" enctype="multipart/form-data">
+<section class="edit-lead-section">
+<form class="form" id="lead-edit-form" action="/get-cash-offer" method="post" enctype="multipart/form-data">
 <div  class="label-input-container" > 
   <label for="first-name" name="first_name">Edit First Name</label>
   <input type="text" name="first_name" placeholder="{{lead.first_name}}" />
@@ -16,11 +16,11 @@
   <label  for="address" name="address">Edit Address</label>
   <input id="autocomplete" placeholder="{{lead.address}}" type="text" name="address" />
  </div> 
-<div>
- <button type="submit" >Submit</button>
+<div class="submit-btn-container">
+ <button type="submit" class="submit-btn" >Submit</button>
 </div>
 </form>
-<div>
+<div class="delete-btn-container">
  <button id="delete-lead-btn" data-id="{{lead.id}}" type="button" >delete</button>
 </div>
 </section>
