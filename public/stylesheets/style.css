@@ -308,3 +308,59 @@ font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-top: 15%;
 }
 /*styles for lead capture form end*/
+
+/*styles for the edit review and posts page start*/
+.edit-post-lead-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.edit-post-review-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.edit-review-post-h1-container {
+    margin-top: 11%;
+    margin-bottom: 11%;
+}
+
+.edit-review-post-h1-container h1 {
+    font-size: 2em;
+    text-shadow: 0 0 10px rgba(58,94,4,0.5);
+}
+
+.edit-review-post-label-textarea-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.edit-review-post-label-textarea-container label {
+    font-size: 1.77em;
+    margin-bottom: 11%;
+    text-shadow: 0 0 10px rgba(58,94,4,0.5);
+}
+
+
+.edit-review-post-label-textarea-container textarea {
+    width: 80%;
+    height: 10em;
+    border: 2px solid rgb(58, 94, 4);
+    border-radius: 8px;
+    font-size: 1.33em;
+    margin-bottom: 11%;
+    font-weight: bold;
+    padding: 3%;
+}
+
+
+.dlte-btn-review-post-container {
+    margin-bottom: 65%;
+   
+}
+/*styles for the edit review and posts page end*/

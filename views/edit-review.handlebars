@@ -1,17 +1,17 @@
-<section>
-    <form id="edit-review-form">
-        <div>
+<section class="edit-post-lead-section">
+    <form id="edit-review-form" class="edit-post-review-form">
+        <div class="edit-review-post-h1-container" >
      <h1>By {{review.user.username}} From {{review.user.state}}</h1>
         </div>
-         <div>
+         <div class="edit-review-post-label-textarea-container">
      <label for="review-text">Edit Review</label>
      <textarea id="review-text" placeholder="{{review.review_text}}" ></textarea>
         </div>
          <div>
-         <button type="submit">Save</button>
+         <button class="submit-btn" type="submit">Save</button>
          </div>
     </form>
-    <div>
+    <div class="delete-btn-container dlte-btn-review-post-container" >
  <button type="click" id="delete-review-button" data-id="{{review.id}}">Delete</button>
     </div>
 </section>
