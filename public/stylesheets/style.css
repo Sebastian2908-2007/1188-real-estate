@@ -154,6 +154,7 @@ footer {
     margin-bottom: 11%;
     border-bottom: 2px solid rgb(99, 158, 9);
     font-size: 3em;
+    text-shadow: 0 0 10px rgba(58,94,4,0.5);
 }
 
 /*lead section admin starts*/
@@ -197,6 +198,8 @@ video {
     color: white;
     font-size: 2.46em;
     padding-left: 15%;
+    text-shadow: 0 0 10px rgba(58,94,4,0.5);
+    margin-bottom: 8%;
 }
 
 .review-post-container p {
@@ -205,9 +208,7 @@ video {
     padding: 3%;
 }
 
-.review-post-container h2 {
-    margin-bottom: 8%;
-}
+
 
 .review-post-container p {
     margin-bottom: 8%;
