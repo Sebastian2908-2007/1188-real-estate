@@ -507,9 +507,9 @@ border-bottom: 2px solid rgb(99, 158, 9);
 /*hero-section styles start*/
 #hero-section {
     background-image:url("../images/blue-background.png") ;
-    background-position: 50% 85%;
+    background-position: 50% 95%;
     background-repeat: no-repeat;
-    background-size: 80% 65%;
+    background-size: 88% 65%;
     min-height: 525px;
     padding:4%;
     border: 3px solid rgb(99, 158, 9);
@@ -537,7 +537,7 @@ border-bottom: 2px solid rgb(99, 158, 9);
 }
 
 .cta h2 {
-    line-height: 1.2;
+    line-height: 1.9;
     font-size: 1.03em;
     text-shadow: 0 0 10px rgba(58,94,4,0.3);
 }
@@ -549,6 +549,7 @@ border-bottom: 2px solid rgb(99, 158, 9);
     box-shadow: 0 0 10px rgba(58,94,4,0.7);
     font-weight: 400;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 25%;
 }
 
 .button-link:hover {
@@ -560,7 +561,7 @@ border-bottom: 2px solid rgb(99, 158, 9);
 
 .button-link-container {
     margin-top: 4%;
-    margin-bottom: 11%;
+    margin-bottom: 5%;
 }
 
 .hero-list {
