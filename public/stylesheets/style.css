@@ -783,4 +783,24 @@ max-width: 100%;
 }
 /*these styles are related to content at the bottom of the main section *Ending* */
 /*main content styles end*/
+
+/*selling property made simple section start*/
+.selling-property-made-simple {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.secondary-background {
+    background-color:#4f87ed  ;
+    border: 3px solid rgb(99, 158, 9);
+    box-shadow: 0 0 10px  #1597c9 ;
+    border-radius: 8px;
+}
+
+.sec-margin {
+    margin: 2% 2% 2% 2% ;
+}
+/*selling property made simple section end*/
+
+
 /*home page styles end*/
