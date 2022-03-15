@@ -553,7 +553,7 @@ border-bottom: 2px solid rgb(99, 158, 9);
     box-shadow: 0 0 10px rgba(58,94,4,0.7);
     font-weight: 400;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-left: 25%;
+    
 }
 
 .button-link:hover {
@@ -806,6 +806,43 @@ max-width: 100%;
     height: auto;
     vertical-align: middle;
     border: none;
+    border: 2px solid rgb(99, 158, 9);
+    box-shadow: 0 0 10px  #062ac9 ;
+    border-radius: 8px;
+}
+
+.image-p {
+    text-align: center;
+    margin-top: 8%;
+}
+
+.made-simple-title {
+    font-size: 1.46rem;
+    text-align: center;
+    margin-top: 6%;
+    margin-bottom: 4%;
+    color: white;
+    text-shadow: 0 0 5px #aef718;
+}
+
+#made-simp-p {
+   text-align: center;
+   line-height: 1.8;
+   font-size: 1.15rem;
+   text-shadow: 0 0 2px #aef718;
+}
+
+.button-link-container p {
+    text-align: center;
+}
+
+#btn-link-2 {
+    margin-top: 16%;
+}
+
+#btn-link-2 p a {
+    padding: 5%;
+    font-size: 1.3em;
 }
 /*selling property made simple section end*/
 
