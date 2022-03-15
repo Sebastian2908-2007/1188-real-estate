@@ -510,7 +510,7 @@ border-bottom: 2px solid rgb(99, 158, 9);
 /*home page styles start*/
 /*hero-section styles start*/
 #hero-section {
-    background-image:url("../images/blue-background.png") ;
+    background-image:url("../img/blue-background.png") ;
     background-position: 50% 95%;
     background-repeat: no-repeat;
     background-size: 88% 65%;
@@ -687,7 +687,7 @@ font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 /*these styles are related to content at the bottom of the main section*/
 .wrapper-image {
-    background-image: url('../images/Screenshot\ \(147\).png');
+    background-image: url('../img/arrows.png');
     background-position: 50% 0;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -799,6 +799,13 @@ max-width: 100%;
 
 .sec-margin {
     margin: 2% 2% 2% 2% ;
+}
+
+.png-img {
+    max-width: 50%;
+    height: auto;
+    vertical-align: middle;
+    border: none;
 }
 /*selling property made simple section end*/
 
