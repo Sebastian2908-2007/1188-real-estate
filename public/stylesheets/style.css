@@ -670,6 +670,7 @@ font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.5rem;
     margin-bottom: 1.25rem;
     font-weight: 400;
+    text-shadow: 0 0 5px rgb(99, 158, 9)
 }
 
 .card-title span {
@@ -830,6 +831,7 @@ max-width: 100%;
    line-height: 1.8;
    font-size: 1.15rem;
    text-shadow: 0 0 2px #aef718;
+   color: white;
 }
 
 .button-link-container p {
@@ -843,6 +845,19 @@ max-width: 100%;
 #btn-link-2 p a {
     padding: 5%;
     font-size: 1.3em;
+}
+
+.last-sec-row {
+    margin-top: 11%;
+}
+
+.card-list {
+    line-height: 1.8;
+}
+
+.card-list li {
+    color: white;
+    text-shadow: 0 0 5px rgb(99, 158, 9)
 }
 /*selling property made simple section end*/
 
