@@ -860,6 +860,88 @@ max-width: 100%;
     text-shadow: 0 0 5px rgb(99, 158, 9)
 }
 /*selling property made simple section end*/
-
-
 /*home page styles end*/
+
+/*media queries for public user side begin=========================*/
+@media screen and (min-width: 768px) {
+    /*hero section styles start*/
+   .container h1 {
+       font-size: 1.8em;
+   } 
+   .cta h2 {
+       font-size: 1.3em ;
+   }
+
+   .hero-list {
+       margin-top: 43%;
+   }
+
+   .hero-list li {
+       font-size: 1.2em;
+   }
+
+   .button-link-container {
+       margin-bottom: 47%;
+   }
+
+   .button-link {
+       padding: 2%;
+   }
+    /*hero section styles end*/
+
+.primary-title {
+    font-size: 2.5rem;
+}
+
+.primary-subtitle {
+    font-size: 1.5rem ;
+}
+/*card styles start*/
+.card-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.card p {
+    font-size: 1.7rem;
+}
+/*card styles end*/
+.wrapper-image {
+    height: 10vh;
+}
+
+.row3-span-container {
+    height: 25vh;
+}
+
+#row3-span {
+    margin-top: 3%;
+}
+
+.image-text-span {
+    padding: 3%;
+}
+
+.svg-image {
+    width: 150px;
+}
+
+.target {
+    padding-left: 58%;
+}
+
+.usa {
+    padding-right: 68%;
+}
+
+.image-text-span {
+    font-size: 1.8rem;
+}
+
+.image-text-span2 {
+    font-size: 1.9rem;
+}
+}
+
+
+/*media queries for public user side end===================*/
