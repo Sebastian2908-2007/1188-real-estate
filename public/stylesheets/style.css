@@ -1025,8 +1025,27 @@ max-width: 100%;
  }
  
 /*dropdown button styles in nav end*/
+
+/*footer styles start*/
+#footer-list li {
+    font-size: 1.25rem;
+}
+
+#footer-list-div {
+    margin-left: 1%;
+}
+
+#copyright-div {
+    font-size: 2rem;
+    margin-right: 1%;
+}
+
+
+/*footer styles end*/
 }
 /*min-width 768px querias end*/
+
+
 
 
 /*media queries for public user side end===================*/
