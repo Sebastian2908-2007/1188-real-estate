@@ -906,6 +906,7 @@ max-width: 100%;
     font-size: 1.7rem;
 }
 /*card styles end*/
+/*main content section starts*/
 .wrapper-image {
     height: 10vh;
 }
@@ -924,6 +925,7 @@ max-width: 100%;
 
 .svg-image {
     width: 150px;
+    box-shadow: 0 0 100px #062ac9;
 }
 
 .target {
@@ -941,6 +943,47 @@ max-width: 100%;
 .image-text-span2 {
     font-size: 1.9rem;
 }
+/*main content section ends*/
+
+/*selling property made simple section begins*/
+#made-simp-p {
+    font-size: 1.5rem;
+}
+
+.made-simple-title {
+    font-size: 2rem;
+}
+
+.png-img {
+    width: 40%;
+    box-shadow: 0 0 100px #062ac9;
+}
+
+#btn-link-2 {
+    margin-bottom: 8%;
+}
+
+/*selling property made simple section ends*/
+
+/*sec-margin section begins*/
+
+.card-list {
+    list-style: none;
+    text-align: center;
+    line-height: 3;
+}
+
+.card-list li {
+    font-size: 1.5rem;
+}
+
+.card-title {
+    font-size: 2.8rem;
+    text-align: center;
+}
+/*sec-margin section ends*/
+
+
 }
 
 
