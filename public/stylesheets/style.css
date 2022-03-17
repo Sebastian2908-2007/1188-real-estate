@@ -863,6 +863,7 @@ max-width: 100%;
 /*home page styles end*/
 
 /*media queries for public user side begin=========================*/
+/*min-width 768px querias start*/
 @media screen and (min-width: 768px) {
     /*hero section styles start*/
    .container h1 {
@@ -983,8 +984,49 @@ max-width: 100%;
 }
 /*sec-margin section ends*/
 
+/*dropdown button styles in nav start*/
+#dropdown:hover {
+     margin-right: 15%;
+     margin-top: 2%;
+    
+ }
 
+ #dropdown-btn{
+     width: 50px;
+     min-height: 42px;
+ }
+
+ #dropdown-btn span  {
+     position: unset;
+     margin: 10%;
+ }
+
+ #dropdown:hover #nav-list {
+    flex-direction: row;
+ 
+ }
+
+ #dropdown:hover #dropdown-content {
+     padding: 8%;
+
+ }
+
+ #dropdown:hover #nav-list li a {
+     font-size: 1.5rem;
+ }
+
+ #dropdown:hover #nav-list li {
+     margin-right: 1.5%;
+     margin-left: 1.5%;
+ }
+
+ header h1 {
+     font-size: 3rem;
+ }
+ 
+/*dropdown button styles in nav end*/
 }
+/*min-width 768px querias end*/
 
 
 /*media queries for public user side end===================*/
