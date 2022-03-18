@@ -537,13 +537,15 @@ border-bottom: 2px solid rgb(99, 158, 9);
 .container h1 {
     line-height: 1.3;
     text-align: center;
-    text-shadow: 0 0 10px rgba(58,94,4,0.5);
+    text-shadow: 0 0 10px #aef718;
+    color: white;
 }
 
 .cta h2 {
     line-height: 1.9;
     font-size: 1.03em;
-    text-shadow: 0 0 10px rgba(58,94,4,0.3);
+    text-shadow: 0 0 2px #aef718;
+    color: white;
 }
 
 .button-link {
@@ -579,7 +581,7 @@ border-bottom: 2px solid rgb(99, 158, 9);
 font-size: .88em;
 margin: 1%;
 font-weight: 400;
-text-shadow: 0 0 10px rgba(58,94,4,0.6);
+text-shadow: 0 0 10px #aef718;
 font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 /*hero-section styles end*/
@@ -1043,8 +1045,68 @@ max-width: 100%;
 
 /*footer styles end*/
 }
-/*min-width 768px querias end*/
+/*min-width 768px queries end*/
 
+ /*min-width 1024px media queries start*/
+ @media screen and (min-width: 1024px) {
+
+    .row3-span-container {
+      height: 45vh;
+    }
+
+    .button-link-container {
+        margin-bottom: 57%;
+    }
+
+    #dropdown {
+        margin-right: 75%;
+    }
+
+    #dropdown:hover {
+        margin-right: 35%;
+    }
+
+    .primary-title {
+        font-size: 2.8rem;
+    }
+
+    .made-simple-title {
+        font-size: 2.3rem;
+    }
+
+ .svg-image  {
+     width: 180px;
+ }
+
+ .image-text-span {
+     font-size: 2.7rem;
+ }
+
+ .image-text-span2 {
+     font-size: 2.6rem;
+ }
+
+ .row3-span-container {
+    height: 55vh;
+ }
+
+ .container h1 {
+     font-size: 2.3em ;
+ }
+
+ .button-link {
+     font-weight: 800;
+ }
+
+ .card-title2 {
+     font-size: 3.8rem;
+ }
+
+
+ }
+
+
+ /*min-width 1024px media queries end*/
 
 
 
