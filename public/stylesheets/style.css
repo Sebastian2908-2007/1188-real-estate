@@ -1108,6 +1108,106 @@ max-width: 100%;
 
  /*min-width 1024px media queries end*/
 
+ /*min-width 1366px start*/
+
+@media screen and (min-width: 1366px) {
+    .row {
+        flex-wrap: nowrap;
+    }
+
+    .card-container {
+        max-width: 50%;
+    }
+
+    .card2 {
+        height: 50vh;
+    }
+
+    .card3 {
+       height: 90vh; 
+    }
+
+    .card-list {
+        line-height: 1.9;
+    }
+
+    .card-list2 {
+        line-height: 2.75;
+    }
+
+    .primary-title {
+        font-size: 3.3rem;
+    }
+
+    .container h1 {
+        font-size: 3.3em;
+    }
+
+.cta h2 {
+    font-size: 2em;
+}
+
+.button-link-container {
+    margin-bottom: 87%;
+}
+
+.hero-list li {
+    font-size: 1.8em;
+}
+
+.button-link {
+    padding: 3%;
+    font-size: 1.4em;
+}
+
+    /*selling property made simple section s starts*/
+    .card-container2 {
+        max-width: 100%;
+    }
+
+    .sell-made-simp-div {
+        width: 50%;
+        padding: 4%;
+    }
+
+    #btn-link-2 p a {
+        padding: 3%;
+    }
+
+    .svg-image {
+        width: 280px;
+    }
+
+    .row3-span-container {
+        height: 65vh;
+    }
+    /*selling property made simple section s ends*/
+
+    /*header nav dropdown starts*/
+    #dropdown {
+        margin-right: 80%;
+    }
+
+    #dropdown:hover {
+        margin-right: 52%;
+    }
+
+    #dropdown:hover #nav-list li {
+        margin: 1.5%;
+    }
+      /*header nav dropdown ends*/
+
+      /*footer styles starts*/
+#footer-list li {
+    font-size: 1.85rem;
+}
+
+
+      /*footer styles ends*/
+}
+
+ /*min-width 1366px end*/
+
 
 
 /*media queries for public user side end===================*/
