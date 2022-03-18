@@ -10,7 +10,7 @@
 }
 
 body {
-    background-color: yellowgreen;
+    background-color: /*yellowgreen*/ black;
 }
 
 /*header styles*/
@@ -619,6 +619,8 @@ font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.125rem;
     margin-bottom: 3rem;
     text-align: center;
+    color: white;
+    text-shadow: 0 0 10px  #aef718;
 }
 
 .row {
@@ -1111,6 +1113,11 @@ max-width: 100%;
  /*min-width 1366px start*/
 
 @media screen and (min-width: 1366px) {
+    #hero-section {
+        background-image:url("../img/real-house.png") ;
+        background-position: 50% 95%;
+    }
+
     .row {
         flex-wrap: nowrap;
     }
@@ -1207,6 +1214,127 @@ max-width: 100%;
 }
 
  /*min-width 1366px end*/
+
+ /*min-width 1920px starts*/
+
+ @media screen and (min-width: 1920px) {
+#dropdown {
+    margin-right: 83%;
+}
+
+#dropdown:hover {
+    margin-right: 65%;
+    
+   
+}
+
+#dropdown-btn {
+    width: 60px;
+    min-height: 52px;
+}
+
+header h1 {
+    font-size: 3.6rem;
+}
+
+     #hero-section {
+        background-position: 50% 85%;
+     }
+
+     .primary-title {
+         font-size: 3.9rem;
+     }
+
+     .primary-subtitle {
+         font-size: 2.3rem;
+     }
+
+     .card2 {
+         height: 30vh;
+     }
+
+     .card3 {
+         height: 60vh;
+     }
+
+     .button-link-container {
+         margin-bottom: 55%;
+     }
+
+     .button-link {
+         font-size: 1.8em;
+     }
+
+     .cta h2 {
+         margin-bottom: 5%;
+     }
+
+     .svg-image {
+         width: 380px;
+     }
+
+     .made-simple-title {
+         font-size: 3.8rem;
+     }
+
+     #made-simp-p {
+         font-size: 2.8rem;
+     }
+
+     .png-img {
+         height: 250px;
+         width: 100%;
+     }
+     #btn-link-2 {
+         margin-top: 8%;
+     }
+
+     .card-list {
+         line-height: 2.5;
+     }
+
+     .card-list li {
+       font-size: 1.8rem;
+     }
+
+     .secondary-background p {
+         margin-top: 3%;
+     }
+
+     .last-sec-row {
+        margin-top: 4.5%;
+    } 
+
+    .card3 {
+        height: 63vh;
+    }
+
+    #footer-list li {
+        font-size: 2.4rem;
+    }
+
+    #copyright-div p {
+        font-size: 1.48em;
+    }
+ }
+
+ /*min-width 1920px ends*/
+
+ /*min-width 2560px starts*/
+
+ @media screen and (min-width: 2560px) {
+    #dropdown {
+        margin-right: 86%;
+    }
+    
+    #dropdown:hover {
+        margin-right: 70%;
+        
+       
+    } 
+ }
+
+
 
 
 
