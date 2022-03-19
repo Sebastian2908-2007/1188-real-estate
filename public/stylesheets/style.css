@@ -368,6 +368,7 @@ align-items: center;
 #lead-submit-form p{
 padding: 11%;
 font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+line-height: 2;
 }
 
 #lead-submit-form button {
@@ -907,6 +908,30 @@ max-width: 100%;
 /*media queries for public user side begin=========================*/
 /*min-width 768px querias start*/
 @media screen and (min-width: 768px) {
+   /*lead submit form styles start*/
+   #lead-submit-form p {
+     font-size: 1.88em;
+   }
+
+   .submit-btn {
+       padding: 18px;
+       font-size: larger;
+       font-weight: 800;
+   }
+   /*shared class starting*/
+
+   .label-input-container label {
+       font-size: 2.8rem;
+   }
+
+   .label-input-container input {
+    font-size: 1.8rem;
+}
+
+   /*shared class ending*/
+
+   /*lead submit form styles end*/
+
     /*hero section styles start*/
    .container h1 {
        font-size: 1.8em;
@@ -1167,6 +1192,32 @@ max-width: 100%;
  /*min-width 1366px start*/
 
 @media screen and (min-width: 1366px) {
+
+
+    /*lead submit form styles start*/
+    #lead-submit-form p {
+        font-size: 2.2em;
+      }
+   
+      .submit-btn {
+          padding: 28px;
+          font-size: 28px;
+          font-weight: 800;
+      }
+      /*shared class starting*/
+   
+      .label-input-container label {
+          font-size: 3.8rem;
+      }
+   
+      .label-input-container input {
+       font-size: 2.8rem;
+   }
+   
+      /*shared class ending*/
+      
+      /*lead submit form styles end*/
+
     #hero-section {
         background-image:url("../img/real-house.png") ;
         background-position: 50% 95%;
