@@ -325,6 +325,7 @@ align-items: center;
     color: white;
     font-size: 2em;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: 0 0 8px #aef718;
 }
 
 .submit-btn {
@@ -334,10 +335,11 @@ align-items: center;
     color: white;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: large;
+    border: 3px solid rgb(58,94,4);
 }
 
 .submit-btn:hover {
-    background-color: lime;
+    background-color: rgb(58,94,4);
 }
 
 .delete-btn-container {
@@ -507,6 +509,42 @@ border-bottom: 2px solid rgb(99, 158, 9);
     font-weight: bolder;
 }
 /*User blog form and review form styles end*/
+/*user account creation styles start*/
+
+#user-signup-form {
+    height: 85vh;
+    text-align: center;
+    align-items: center;
+    padding: 8%;
+}
+
+#signup-form-title {
+    color: white;
+    text-shadow: 0 0 10px #aef718;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.signup-btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.signup-btn {
+    padding: 5px;
+    border-radius: 8px;
+    background-color: rgb(8, 226, 8);
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    border: 3px solid rgb(58,94,4);
+}
+
+.signup-btn:hover {
+    background-color: rgb(58,94,4);
+}
+
+/*user account creation styles end*/
+
 /*home page styles start*/
 /*hero-section styles start*/
 #hero-section {
@@ -1109,6 +1147,22 @@ max-width: 100%;
 
 
  /*min-width 1024px media queries end*/
+
+/*min-width 1260 starts*/
+
+@media screen and (min-width: 1260px) {
+    #dropdown {
+        margin-right: 80%;
+    }
+
+    #dropdown:hover {
+        margin-right: 48%;
+    } 
+
+}
+
+
+/*min-width 1260 ends*/
 
  /*min-width 1366px start*/
 
