@@ -513,9 +513,6 @@ border-bottom: 2px solid rgb(99, 158, 9);
 /*user account creation styles start*/
 
 #user-signup-form {
-    height: 85vh;
-    text-align: center;
-    align-items: center;
     padding: 8%;
 }
 
@@ -932,6 +929,24 @@ max-width: 100%;
 
    /*lead submit form styles end*/
 
+   /*user creation styles starting*/
+.signup-title-div {
+    text-align: center;
+}
+
+#signup-form-title {
+    font-size: 3rem;
+    padding: 11%;
+}
+
+.signup-btn {
+    padding: 18px;
+    font-size: larger;
+    font-weight: 800;
+}
+
+   /*user creation styles ending*/
+
     /*hero section styles start*/
    .container h1 {
        font-size: 1.8em;
@@ -1194,6 +1209,19 @@ max-width: 100%;
 @media screen and (min-width: 1366px) {
 
 
+/*user creation style starting*/
+#signup-form-title {
+    font-size: 4rem;
+    padding: 11%;
+}
+
+.signup-btn {
+    padding: 28px;
+    font-size: 28px;
+    font-weight: 800;
+}
+/*user creation style ending*/
+
     /*lead submit form styles start*/
     #lead-submit-form p {
         font-size: 2.2em;
@@ -1341,6 +1369,19 @@ max-width: 100%;
 header h1 {
     font-size: 3.6rem;
 }
+
+/*user creation style starting*/
+#signup-form-title {
+    font-size: 4.8rem;
+    padding: 11%;
+}
+
+.signup-btn {
+    padding: 33px;
+    font-size: 38px;
+    font-weight: 800;
+}
+/*user creation style ending*/
 
      #hero-section {
         background-position: 50% 85%;
