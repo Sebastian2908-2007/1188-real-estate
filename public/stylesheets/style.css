@@ -480,7 +480,7 @@ line-height: 2;
 font-size: 2.52em;
 margin-bottom: 18%;
 text-shadow: 0 0 10px rgba(58,94,4,0.5);
-border-bottom: 2px solid rgb(99, 158, 9);
+
 }
 
 .user-blog-review-post-section {
@@ -510,6 +510,8 @@ border-bottom: 2px solid rgb(99, 158, 9);
     font-weight: bolder;
 }
 /*User blog form and review form styles end*/
+
+
 /*user account creation styles start*/
 
 #user-signup-form {
@@ -905,6 +907,44 @@ max-width: 100%;
 /*media queries for public user side begin=========================*/
 /*min-width 768px querias start*/
 @media screen and (min-width: 768px) {
+
+/*user-blog and user reviews  starts*/
+.review-post-h1-p-div h1 {
+    font-size: 2.55em;
+    line-height: 1.3;
+}
+
+.review-post-h1-p-div p {
+    font-size: 2.11em;
+    line-height: 1.4;
+}
+
+.post-review-label-texarea-container label {
+    font-size: 1.98em;
+}
+
+.new-post-review-button {
+    padding: 8%;
+    font-size: 1.78em;
+}
+
+.user-blog-review-post-section h2 {
+    font-size: 4.53em;
+}
+
+.review-post-container p {
+    font-size: 2.22em;
+}
+
+.link-div {
+    font-size: 1.68em;
+}
+
+
+
+
+/*user-blog and user reviews  ends*/
+
    /*lead submit form styles start*/
    #lead-submit-form p {
      font-size: 1.88em;
@@ -1068,7 +1108,8 @@ max-width: 100%;
 
 /*dropdown button styles in nav start*/
 #dropdown:hover {
-     margin-right: 15%;
+    /*margin right was working at 15% on hover while starting at 60% but loggeed in with the buton changed things*/
+     margin-right: 55%;
      margin-top: 2%;
     
  }
@@ -1084,7 +1125,7 @@ max-width: 100%;
  }
 
  #dropdown:hover #nav-list {
-    flex-direction: row;
+    flex-direction: column;
  
  }
 
@@ -1143,7 +1184,7 @@ max-width: 100%;
     }
 
     #dropdown:hover {
-        margin-right: 35%;
+        margin-right: 65%;
     }
 
     .primary-title {
@@ -1196,7 +1237,7 @@ max-width: 100%;
     }
 
     #dropdown:hover {
-        margin-right: 48%;
+        margin-right: 70%;
     } 
 
 }
@@ -1245,6 +1286,13 @@ max-width: 100%;
       /*shared class ending*/
       
       /*lead submit form styles end*/
+
+      /*user login styles start*/
+      .login-btn {
+          padding: 28%;
+          font-size: 2em;
+      }
+      /*user login styles end*/
 
     #hero-section {
         background-image:url("../img/real-house.png") ;
@@ -1329,7 +1377,7 @@ max-width: 100%;
     }
 
     #dropdown:hover {
-        margin-right: 52%;
+        margin-right: 72%;
     }
 
     #dropdown:hover #nav-list li {
@@ -1356,7 +1404,7 @@ max-width: 100%;
 }
 
 #dropdown:hover {
-    margin-right: 65%;
+    margin-right: 76%;
     
    
 }
@@ -1462,6 +1510,48 @@ header h1 {
     #copyright-div p {
         font-size: 1.48em;
     }
+
+/*user-blog and user reviews  starts*/
+.review-post-h1-p-div h1 {
+    font-size: 3.85em;
+    line-height: 1.3;
+}
+
+.review-post-h1-p-div p {
+    font-size: 3.61em;
+    line-height: 1.6;
+}
+
+.post-review-label-texarea-container label {
+    font-size: 3.33em;
+}
+.post-review-label-texarea-container textarea {
+    font-size: 2.98em;
+}
+
+.new-post-review-button {
+    padding: 11%;
+    font-size: 2.98em;
+}
+
+.user-blog-review-post-section h2 {
+    font-size: 8.53em;
+}
+
+.review-post-container p {
+    font-size: 3.22em;
+}
+
+.link-div {
+    font-size: 2.68em;
+}
+
+
+
+
+/*user-blog and user reviews  ends*/
+
+
  }
 
  /*min-width 1920px ends*/
@@ -1470,11 +1560,11 @@ header h1 {
 
  @media screen and (min-width: 2560px) {
     #dropdown {
-        margin-right: 86%;
+        margin-right: 78%;
     }
     
     #dropdown:hover {
-        margin-right: 70%;
+        margin-right: 79%;
         
        
     } 
