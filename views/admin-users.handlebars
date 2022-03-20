@@ -1,14 +1,15 @@
-<section>
+<section class="admin-users-section">
+    <h1>Public Users</h1>
  {{#if users.length}}
  {{#each users as |user|}}
- <div>
-     <div> 
+ <div class="user-container">
+     <div class="user-info-div"> 
      <span>{{user.username}}</span>
      <span>{{user.state}}</span>
      <span>{{user.email}}</span>
     </div>
-    <div>
-        <a href="/admin/delete/{{user.id}}">Delete</a>
+    <div class="dlt-user-link-container">
+        <a class="delete-user-link" href="/admin/delete/{{user.id}}">Delete</a>
     </div> 
  </div>
  {{/each}}
