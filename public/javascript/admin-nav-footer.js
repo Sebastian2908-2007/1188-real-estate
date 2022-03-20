@@ -26,7 +26,7 @@ function navList() {
       // padding that will work on dropdown content '18% 111% 1% 11%';
     
     // change #dropdown to margin-right 20% when on admin side 18
-   dropdown.style.margin = '0 42% 0 0';
+   dropdown.style.margin = '0 18% 0 0';
    dropDownContent.style.padding = '0%';
    navList.style.alignItems = 'center';
 

@@ -217,6 +217,12 @@ footer {
     align-items: center;
     
 }
+
+video {
+    border: 2px solid rgb(99, 158, 9);
+    border-radius: 8px;
+}
+
 .admin-section h1 {
     margin-bottom: 11%;
     border-bottom: 2px solid rgb(99, 158, 9);
@@ -259,12 +265,13 @@ video {
     margin-top: 3%;
     margin-bottom: 3%;
     border-bottom: 2px solid rgb(99, 158, 9);
+    text-align: center;
 }
 
 .review-post-container h2 {
     color: white;
     font-size: 2.46em;
-    padding-left: 15%;
+    /*padding-left: 15%;*/
     text-shadow: 0 0 10px rgba(58,94,4,0.5);
     margin-bottom: 8%;
 }
@@ -908,6 +915,66 @@ max-width: 100%;
 /*min-width 768px querias start*/
 @media screen and (min-width: 768px) {
 
+    /*Admin Styles start*/
+
+.login-btn {
+   padding: 38%; 
+   font-size: 1.66em;
+   margin-top: 100%;
+}
+/*Dashboard styles start*/
+.lead-info span {
+    font-size: 2.28em;
+}
+
+.admin-section h1 {
+    font-size: 5em;
+}
+
+#video-div {
+    display: flex;
+    justify-content: center;
+}
+
+video {
+    width: 80%;
+    height: 1%;
+    border: 3px solid rgb(99, 158, 9);
+}
+/*Dashboard styles end*/
+
+/*edit lead styles start*/
+#delete-lead-btn {
+    padding: 18px;
+    font-size: larger;
+    font-weight: 800;
+}
+/*edit lead styles end*/
+
+/*edit review post styles start*/
+
+.edit-review-post-h1-container h1{
+font-size: 4em;
+}
+
+.edit-review-post-label-textarea-container label {
+   font-size: 2.88em;
+}
+
+.edit-review-post-label-textarea-container textarea {
+    font-size: 2.33em;
+}
+
+#delete-review-button {
+    padding: 17px;
+    font-size: larger;
+    font-weight: 800;
+}
+/*edit review styles end*/
+
+
+    /*Admin Styles end*/
+
 /*user-blog and user reviews  starts*/
 .review-post-h1-p-div h1 {
     font-size: 2.55em;
@@ -1249,6 +1316,41 @@ max-width: 100%;
 
 @media screen and (min-width: 1366px) {
 
+/*admin dashboard*/
+.review-post-container h2 {
+    font-size: 5.46em;
+}
+
+.review-post-container p {
+    font-size: 3.22em;
+}
+
+.lead-info span {
+    font-size: 4.28em;
+}
+
+.admin-section h1 {
+    font-size: 7em;
+}
+
+/*edit lead styles start*/
+#delete-lead-btn {
+    padding: 28px;
+    font-size: 28px;
+    font-weight: 800;
+}
+/*edit lead styles end*/
+
+/*edit review starts*/
+#delete-review-button {
+    padding: 27px;
+    font-size: 27px;
+    font-weight: 800;
+}
+/*edit review ends*/
+
+
+/*admin dashboard ends*/
 
 /*user creation style starting*/
 #signup-form-title {
@@ -1399,6 +1501,33 @@ max-width: 100%;
  /*min-width 1920px starts*/
 
  @media screen and (min-width: 1920px) {
+/*Admin Styles start*/
+.login-btn {
+    padding: 38%; 
+    font-size: 2.66em;
+ }
+
+ /*edit review starts*/
+.edit-review-post-h1-container h1 {
+    font-size: 7em;
+}
+
+.edit-review-post-label-textarea-container label {
+    font-size: 4.88em;
+}
+
+#delete-review-button {
+    padding: 47px;
+    font-size: 47px;
+}
+.submit-btn {
+    padding: 48px;
+    font-size: 48px;
+}
+
+/*edit review ends*/
+ /*Admin styles end*/
+
 #dropdown {
     margin-right: 83%;
 }
@@ -1539,7 +1668,7 @@ header h1 {
 }
 
 .review-post-container p {
-    font-size: 3.22em;
+    font-size: 4.22em;
 }
 
 .link-div {
