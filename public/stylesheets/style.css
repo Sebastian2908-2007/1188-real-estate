@@ -574,6 +574,43 @@ text-shadow: 0 0 10px rgba(58,94,4,0.5);
 
 /*admin side user page styles end*/
 
+/*delete user/admin styles start*/
+.delete-user-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    height: 100vh;
+}
+
+.delete-user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 3;
+}
+
+.delete-user-info span {
+    font-size: 2em;
+    color: white;
+    text-shadow: 0 0 10px rgb(99, 158, 9);
+}
+#user-delete-btn {
+    margin-top: 20%;
+}
+
+#delete-user-btn {
+    padding: 20px;
+    background-color: red;
+    font-size: 25px;
+    border-radius: 8px;
+    color: white;
+    border: 1px solid white;
+    box-shadow:0 0 10px red;
+}
+/*delete user/admin styles end*/
+
 /*user account creation styles start*/
 
 #user-signup-form {
@@ -1065,6 +1102,24 @@ font-size: 4em;
 
 /*admin side user page styles end*/
 
+/*delete user page styles start*/
+.delete-user-info {
+    line-height: 5;
+}
+
+.delete-user-info span {
+    font-size: 3em;
+}
+#user-delete-btn {
+    margin-top: 25%;
+}
+
+#delete-user-btn {
+    padding: 30px;
+    font-size: 25px;
+}
+/*delete user styles end*/
+
 
     /*Admin Styles end*/
 
@@ -1347,6 +1402,14 @@ font-size: 4em;
 
     .dlt-user-link-container {
         margin-top: 2%;
+    }
+
+    .delete-user-info {
+        line-height: 3;
+    }
+
+    #user-delete-btn {
+        margin-top: 5%;
     }
     /*admin styles end*/
 
@@ -1684,6 +1747,14 @@ font-size: 4em;
 
 /*admin side user page styles end*/
 
+.delete-user-info span {
+    font-size: 5em;
+}
+
+#delete-user-btn {
+    padding: 40px;
+    font-size: 35px;
+}
 
  /*Admin styles end*/
 
