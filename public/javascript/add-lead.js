@@ -12,7 +12,9 @@ console.log(formData);
      body: formData
  })
  if(response.ok) {
-     console.log('hello');
+    document.location.replace('/');
+ }else{
+     alert(response.statusText);
  }
 };
 
