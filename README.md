@@ -73,3 +73,19 @@ ISC
 
 ## Pictures of site (1366px)
 
+![Screenshot (183)](https://user-images.githubusercontent.com/77297220/159550589-5e0f08b5-ba4c-4dcc-a312-5090f79fcd56.png)
+
+![Screenshot (184)](https://user-images.githubusercontent.com/77297220/159550599-ad35096a-2b2f-4a10-a48b-4d1cf16a3e97.png)
+
+![Screenshot (185)](https://user-images.githubusercontent.com/77297220/159550624-3f9ad111-797b-462c-85a9-01e1df7c8c75.png)
+
+![Screenshot (186)](https://user-images.githubusercontent.com/77297220/159550635-0d1fc980-2009-43ae-8454-55db7eda8d7d.png)
+
+![Screenshot (187)](https://user-images.githubusercontent.com/77297220/159550640-d71b6c20-0906-4c6a-9126-eda3346dacef.png)
+
+![Screenshot (188)](https://user-images.githubusercontent.com/77297220/159550658-e9c91e29-4e34-4227-8496-8b8431a13600.png)
+
+![Screenshot (189)](https://user-images.githubusercontent.com/77297220/159550671-4aed1e6d-b2d9-47fe-ac65-2bbf2e8bbc72.png)
+
+![Screenshot (191)](https://user-images.githubusercontent.com/77297220/159550683-a92247da-85d1-4eb6-81a7-801333b9f492.png)
+
