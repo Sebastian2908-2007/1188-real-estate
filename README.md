@@ -53,3 +53,20 @@ ISC
 
 ## License link
 (https://www.isc.org/licenses/)   
+
+## Pictures of site
+![Screenshot (173)](https://user-images.githubusercontent.com/77297220/159547757-f0f36d7f-99d8-4a99-b8dd-57bd334f57da.png)
+
+![Screenshot (174)](https://user-images.githubusercontent.com/77297220/159547775-a6645abb-3cfc-480f-949a-5469b15c5cef.png)
+
+![Screenshot (175)](https://user-images.githubusercontent.com/77297220/159547787-a3e7c9e8-fba8-4dc3-b6d9-4bde6dc83ad5.png)
+
+![Screenshot (176)](https://user-images.githubusercontent.com/77297220/159547793-a0b42b01-a0cb-46d9-8260-1cfaafa12965.png)
+
+![Screenshot (177)](https://user-images.githubusercontent.com/77297220/159547802-114d8bb4-43ea-461d-8809-9a51bca5e20d.png)
+
+![Screenshot (178)](https://user-images.githubusercontent.com/77297220/159547820-4fc2cee1-b0b0-44d0-9c39-82e3b3701dc3.png)
+
+![Screenshot (179)](https://user-images.githubusercontent.com/77297220/159547841-32518165-d451-409e-a9a5-09d16a0d514b.png)
+
+![Screenshot (181)](https://user-images.githubusercontent.com/77297220/159547881-d407833c-1f46-4ec3-9310-8bd602c490ff.png)
