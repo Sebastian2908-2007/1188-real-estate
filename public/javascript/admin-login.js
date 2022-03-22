@@ -1,4 +1,6 @@
 async function adminLoginHandler(event) {
+event.preventDefault();
+
     const admin = document.querySelector('#admin-name-login').value;
     const password = document.querySelector('#admin-password-login').value;
 
