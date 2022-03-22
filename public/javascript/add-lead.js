@@ -6,7 +6,6 @@ async function newLeadHandler(event) {
 
 const form = document.querySelector('#lead-submit-form');
 const formData = new FormData(form);
-console.log(formData);
  const response = await fetch('/api/leads',{
      method: 'POST',
      body: formData

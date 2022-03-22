@@ -56,8 +56,7 @@ router.post('/',video_upload.single('walk-through-video'),async (req,res) => {
             res.status(500).json({message: 'incorrect data'});
             return;
         } 
-        console.log(dbLeadData);
-        console.log(dbLeadData.walk_through_video); 
+       res.json(dbLeadData);
     })
     .catch(err => {
         console.log(err);
