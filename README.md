@@ -54,7 +54,7 @@ ISC
 ## License link
 (https://www.isc.org/licenses/)   
 
-## Pictures of site
+## Pictures of site (phone 375px)
 ![Screenshot (173)](https://user-images.githubusercontent.com/77297220/159547757-f0f36d7f-99d8-4a99-b8dd-57bd334f57da.png)
 
 ![Screenshot (174)](https://user-images.githubusercontent.com/77297220/159547775-a6645abb-3cfc-480f-949a-5469b15c5cef.png)
@@ -70,3 +70,6 @@ ISC
 ![Screenshot (179)](https://user-images.githubusercontent.com/77297220/159547841-32518165-d451-409e-a9a5-09d16a0d514b.png)
 
 ![Screenshot (181)](https://user-images.githubusercontent.com/77297220/159547881-d407833c-1f46-4ec3-9310-8bd602c490ff.png)
+
+## Pictures of site (1366px)
+
