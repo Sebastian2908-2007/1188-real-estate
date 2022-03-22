@@ -8,7 +8,7 @@
  https://github.com/Sebastian2908-2007/1188-real-estate
  ## Description
 
-This is a project that will allow home owners to request a cash offer for their property. The thing that makes it great is the fact that they can submit a walk through video of their property getting rid of the need to do a real life walk through
+This is a project that will allow home owners to request a cash offer for their property. The thing that makes it great is the fact that they can submit a walk through video of their property getting rid of the need to do a real life walk through. I also used google autocomplete for the address field on the lead submission page which I think is really great!
     
  ## Table Of Contents
 * [Description](#description)
