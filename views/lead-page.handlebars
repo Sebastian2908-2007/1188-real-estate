@@ -26,6 +26,25 @@
  <button type="submit" class="submit-btn"  >Submit</button>
 </form>
 
+<!-- google script for auto complete -->
+<script>
+    let autocomplete;
+    function initAutocomplete() {
+        autocomplete = new google.maps.places.Autocomplete(
+            document.getElementById('autocomplete'),
+
+        {
+            types: ['address'],
+            componentRestrictions: {country : ['US']},
+            fields: ['vicinity']
+        })
+    }
+</script>
+<script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRAziCbvwi_tnshs3g2uM6WCvdvdvOTL4&libraries=places&callback=initAutocomplete">
+</script>
+<!-- google script for auto complete ends -->
+
 <!--<video controls src="/images/c7ea59b7ee82192fa689dff447239b31"></video>-->
 <script src="/javascript/add-lead.js" ></script>
 {{#if loggedIn}}
