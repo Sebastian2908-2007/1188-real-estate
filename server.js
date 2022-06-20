@@ -59,3 +59,4 @@ sequelize.sync({force: false}).then(() => {
     // turning on the server
     app.listen(PORT, () => console.log(`now listening 0n port:${PORT}`));
 });
+
