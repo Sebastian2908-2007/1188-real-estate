@@ -36,7 +36,7 @@ const sess = {
 };
 
 // this must be put before any other middleware enforce https you must use enforce.HTTPS({ trustProtoHeader: true }) if you are behind a load balancer e.g. heroku
-app.use(enforce.HTTPS({ trustProtoHeader: true }));
+//app.use(enforce.HTTPS({ trustProtoHeader: true }));
 
 // use the sess we created 
 app.use(session(sess));
@@ -59,3 +59,4 @@ sequelize.sync({force: false}).then(() => {
     // turning on the server
     app.listen(PORT, () => console.log(`now listening 0n port:${PORT}`));
 });
+
