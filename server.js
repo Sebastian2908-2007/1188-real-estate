@@ -5,6 +5,8 @@ const express = require('express');
 const sequelize = require('./config/connection');
 // requiring express.js
 const app = express();
+// this is express-sslify for redirecting http to https
+const enforce = require('express-sslify');
 // configuring port
 const PORT = process.env.PORT || 3001;
 // import helper functions from utils for handlebars
@@ -32,6 +34,10 @@ const sess = {
        db:sequelize
    })
 };
+
+// this must be put before any other middleware enforce https you must use enforce.HTTPS({ trustProtoHeader: true }) if you are behind a load balancer e.g. heroku
+app.use(enforce.HTTPS({ trustProtoHeader: true }));
+
 // use the sess we created 
 app.use(session(sess));
 // set  handlebars as our view engine
@@ -45,6 +51,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // use our controller routes
 app.use(routes);
+
+
 
 // sync all of my sequelize models with the db for data creation
 sequelize.sync({force: false}).then(() => {
