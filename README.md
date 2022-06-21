@@ -26,7 +26,7 @@ This is a project that will allow home owners to request a cash offer for their 
 aws-sdk, bcrypt, connect-session-sequelize, dotenv, express, express-handlebars,express-session,multer,mysql2,sequelize
 
 ## Usage
-Navigate to 2908realestate.com and create an account so you can post and leave reviews or even add a real estate lead if you have one. This is now an active business APP so the admin side of things is locked to the public.
+Navigate to https://2908realestate.com and create an account so you can post and leave reviews or even add a real estate lead if you have one. This is now an active business APP so the admin side of things is locked to the public.
 
  ## Contributors
 
