@@ -1,33 +1,21 @@
 {
   "name": "1188-real-estate",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Sebastian2908-2007/1188-real-estate.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Sebastian2908-2007/1188-real-estate/issues"
-  },
-  "homepage": "https://github.com/Sebastian2908-2007/1188-real-estate#readme",
   "dependencies": {
-    "aws-sdk": "^2.1079.0",
-    "bcrypt": "^5.0.1",
-    "connect-session-sequelize": "^7.1.2",
-    "dotenv": "^16.0.0",
-    "express": "^4.17.2",
-    "express-handlebars": "^6.0.2",
-    "express-session": "^1.17.2",
-    "multer": "^1.4.4",
-    "mysql2": "^2.3.3",
-    "sequelize": "^6.16.1"
+    "autoprefixer": "10.4.14",
+    "eslint": "8.45.0",
+    "eslint-config-next": "13.4.10",
+    "next": "13.4.10",
+    "postcss": "8.4.26",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwindcss": "3.3.3"
   }
 }
