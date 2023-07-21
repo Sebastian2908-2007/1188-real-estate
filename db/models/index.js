@@ -4,6 +4,8 @@ import Situation from './Situation';
 import Admin from './Admin';
 import Note from './Note';
 import ColdLead from './ColdLead';
+import ColdLeadEmail from './ColdLeadEmail';
+import ColdLeadPhone from './ColdLeadPhone';
 
 module.exports = {
     HotLead,
@@ -11,5 +13,7 @@ module.exports = {
     Situation,
     Admin,
     Note,
-    ColdLead
+    ColdLead,
+    ColdLeadEmail,
+    ColdLeadPhone
 };

@@ -2,18 +2,15 @@ import mongoose from "mongoose";
 const {Schema, model} = mongoose;
 
 const coldLeadSchema = new Schema({
-    email:[{
-        type: String,
-        required: false,
-        trim: true,
-        unique: true,
-        match: [/.+@.+\..+/, 'Must be an email address!']
+    emailAddresses:[{
+        type: Schema.Types.ObjectId,
+       ref: 'ColdLeadEmail',
+       unique: false
     }],
-    phone:{
-        type: String,
-        required: false,
-        trim: true
-    },
+    phone:[{
+        type: Schema.Types.ObjectId,
+        ref:'ColdLeadPhone'
+    }],
     address:{
         type: String,
         required: true,

@@ -53,6 +53,8 @@ export async function PUT(request,{params}) {
     }
   }
 
+
+  /*this post Route will be used on client side for creating situations in the user form*/
   export async function POST(request,{params}) {
     const { id } = params;
     const { sellFastStatus, openToPayments, sellerGoal, bestCallTime } = await request.json();
