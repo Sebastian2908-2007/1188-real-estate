@@ -2,6 +2,8 @@ import dbConnect from "@/db/config/connection";
 import {ColdLead,ColdLeadPhone} from '@/db/models';
 import { NextResponse } from "next/server";
 
+
+/**this creates a coldLeadPhone data type and adds it to the cold lead phone array using the id in the params */
 export async function POST(request,{params}) {
     const  coldLeadId  = params.id;
     const { phone } = await request.json();
