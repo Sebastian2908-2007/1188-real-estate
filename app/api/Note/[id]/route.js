@@ -2,6 +2,8 @@ import dbConnect from "@/db/config/connection";
 import {Note,HotLead} from '@/db/models';
 import { NextResponse } from "next/server";
 
+
+/**this pushes note to HotLead after creating it the hot lead id will be in the query params*/
 export async function POST(request,{params}) {
     const  hotLeadId  = params.id;
     const { noteText } = await request.json();

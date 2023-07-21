@@ -6,6 +6,7 @@ import { NextResponse } from "next/server";
 
 export async function POST(request) {
     const { address } = await request.json();
+    const status = 'raw';
   
     try {
       await dbConnect(); // Connect to MongoDB
@@ -13,6 +14,7 @@ export async function POST(request) {
       // Create a new ColdLead document with the provided address
       const newColdLead = new ColdLead({
         address,
+        status
       });
   
       // Save the new ColdLead document to the database
@@ -34,7 +36,8 @@ export async function POST(request) {
         .populate('emailAddresses', 'suspectedEmail date') // Populate ColdLeadEmail data with only the emailAddress field
         .populate('phone', 'phone date') // Populate ColdLeadPhone data with only the phoneNumber field
         .populate('houseInfo', 'garageType atticType occupiedStatus basementType lengthOwned listedStatus propertyCondition repairs walkThroughVideo')
-        .populate('situation', 'sellFastStatus openToPayments sellerGoal bestCallTime');
+        .populate('situation', 'sellFastStatus openToPayments sellerGoal bestCallTime')
+        .populate('notes','date noteText');
   
       return NextResponse.json({ coldLeads }, { status: 200 }); // 200 OK
     } catch (error) {

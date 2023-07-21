@@ -2,6 +2,7 @@ import dbConnect from "@/db/config/connection";
 import {Situation} from '@/db/models';
 import { NextResponse } from "next/server";
 
+/**this creates a situation and nothing else*/
 export async function POST(request) {
     const { sellFastStatus, openToPayments, sellerGoal, bestCallTime } = await request.json();
   
@@ -25,6 +26,7 @@ export async function POST(request) {
     }
   }
   
+  /**this will just get all situations */
   export async function GET(request) {
     try {
       await dbConnect(); // Connect to MongoDB
@@ -37,3 +39,4 @@ export async function POST(request) {
       return NextResponse.json({ error: 'Server error.' }, { status: 500 });
     }
   }
+
