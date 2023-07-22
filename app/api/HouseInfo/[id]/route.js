@@ -40,6 +40,7 @@ export async function DELETE(request,{params}) {
     }
   }
 
+  /**this route will update house info */
   export async function PUT(request,{params}) {
     const { id } = params;
     const updatedFields = await request.json();
@@ -72,7 +73,8 @@ export async function DELETE(request,{params}) {
 
 
 
-  /*this post Route will be used on client side for creating HouseInfo in the user form*/
+  /*this post Route will be used on client side for creating HouseInfo in the user form it will push hot lead to
+  existing hot lead*/
   export async function POST(request,{params}) {
     const { id } = params;
     const body = await request.json();

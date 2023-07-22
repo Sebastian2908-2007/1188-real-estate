@@ -2,27 +2,6 @@ import dbConnect from "@/db/config/connection";
 import {ColdLead,ColdLeadEmail,Situation,HouseInfo,ColdLeadPhone,Note} from '@/db/models';
 import { NextResponse } from "next/server";
 
-/*export async function DELETE(request,{params}) {
-    const  coldLeadId  = params.id;
-  
-    try {
-      await dbConnect(); // Connect to MongoDB
-  
-      // Find the existing ColdLead document by ID
-      const existingColdLead = await ColdLead.findById(coldLeadId);
-  
-      if (!existingColdLead) {
-        return NextResponse.json({ error: 'ColdLead not found.' }, { status: 404 }); // 404 Not Found
-      }
-  
-      // Delete the ColdLead document itself
-      const deletedColdLead = await existingColdLead.deleteOne();
-  
-      return NextResponse.json({ deletedColdLeadId: deletedColdLead?._id }, { status: 200 }); // 200 OK
-    } catch (error) {
-      return NextResponse.json({ error: 'Server error.' }, { status: 500 }); // 500 Internal Server Error
-    }
-  }*/
 
   /**this route will be used to update first and last name fields along with status and address if needed */
   export async function PUT(request,{params}) {
