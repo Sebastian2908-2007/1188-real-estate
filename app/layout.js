@@ -15,3 +15,5 @@ export default function RootLayout({ children }) {
     </html>
   )
 }
+
+/**green #a2d033 dark blue #143c64 light blue #62b2cb  */
