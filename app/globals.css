@@ -2,7 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
+.logo{
+  width: 69%;
+margin: 2% 2% 3% 2%;
+}
 
 /*clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);*/
 @layer utilities {
@@ -13,3 +16,29 @@
 }
 }
 
+.logo{
+@media screen and (min-width: 360px) {
+  width: 39%;
+}
+}
+.logo{
+@media screen and (min-width: 600px) {
+  width: 30%;
+}
+}
+.logo{
+@media screen and (min-width: 1024px) {
+  margin-bottom: 3%;
+}
+}
+ 
+.logo{
+@media screen and (min-width: 1366px) {
+  width: 35%;
+}
+}
+.logo{
+@media screen and (min-width: 1536px) {
+  width: 45%;
+}
+}
