@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from '../public/relogo (1).png';
+import logo from '../public/relogo (5).png';
 import DrawerNav from "./DrawerNav";
 const Heading = () => {
     return(
@@ -11,7 +11,7 @@ const Heading = () => {
             alt="2908 realestate logo"
             />
         </div>
-    <DrawerNav/>
+        <DrawerNav/>
     </header>
     );
 };
