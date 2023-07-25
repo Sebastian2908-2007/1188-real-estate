@@ -1,6 +1,13 @@
 const Footer = () => {
     return(
-        <footer className=" flex flex-col bg-sitedrkblu justify-between sticky bottom-0 pl-10 pr-10">
+        <footer className="
+         flex flex-col
+         bg-sitedrkblu
+         justify-between
+         bottom-0
+         min-[360px]:pl-10
+         min-[360px]:pr-10
+         ">
                <nav className="flex flex-row justify-between px-1 my-2">
             <span className="text-sitegrn text-sm">Process</span>
             <span className="text-sitegrn text-sm">Reviews</span>

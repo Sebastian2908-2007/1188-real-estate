@@ -16,7 +16,9 @@ export default function RootLayout({ children }) {
     
       <body className='myBody bg-gradient-to-r from-sitelteblu to-sitedrkblu'>
       <Heading/>
+      <main>
         {children} 
+      </main>
         <Footer/>
       </body>
       
