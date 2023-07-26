@@ -1,6 +1,12 @@
+import ProcessHero from "@/components/ProcessHero";
+import ProcessSection from "@/components/ProcessSection";
 const Process = () => {
     return(
-        <div>This is Process</div>
+        <>
+        <ProcessHero/>
+         <ProcessSection/>
+        </>
+        
     );
 };
 
