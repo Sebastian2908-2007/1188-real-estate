@@ -73,8 +73,8 @@ export default function DrawerNav() {
               <ListItemIcon className='text-sitegrn mr-0'>
                 <ReviewsIcon sx={iconListITemStyle}/>
               </ListItemIcon>
-              <Link href='/reviews'>
-              <span className=' text-sm text-sitegrn min-[540px]:text-xl'>Reviews</span>
+              <Link href='/qualify'>
+              <span className=' text-sm text-sitegrn min-[540px]:text-xl'>Qualify</span>
                 </Link>
             </ListItemButton>
           </ListItem>

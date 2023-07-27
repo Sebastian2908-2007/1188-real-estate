@@ -10,7 +10,7 @@ const Footer = () => {
          ">
                <nav className="flex flex-row justify-between px-1 my-2">
             <span className="text-sitegrn text-sm">Process</span>
-            <span className="text-sitegrn text-sm">Reviews</span>
+            <span className="text-sitegrn text-sm">Qualify</span>
             <span className="text-sitegrn text-sm">About</span>
             <span className="text-sitegrn text-sm">Sell now</span>
         </nav>
