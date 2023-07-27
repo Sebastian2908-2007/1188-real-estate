@@ -18,8 +18,30 @@ export default function ProcessSection () {
             <InitialForm/>
             <section className="flex flex-col items-center mt-4">
             <h2 className="text-center text-white text-xl font-bold drop-shadow-3xl mt-4 mb-4">Dont wait Months to sell your property</h2>
-            <section className="flex flex-col items-center">
-              <div className="flex flex-col items-center mt-4 mb-4 bg-sitedrkblu opacity-75 p-2 border-2 border-white rounded-lg">
+            <section className="
+            flex 
+            flex-col
+            items-center
+            min-[540px]:flex-row
+            min-[540px]:w-full
+            min-[540px]:space-x-2
+            ">
+              <div className="
+              flex 
+              flex-col
+               items-center
+               mt-4
+               mb-4
+               bg-sitedrkblu 
+              opacity-75
+               p-2 
+              border-2 
+              border-white
+              rounded-lg
+              min-[540px]:w-2/3
+              min-[540px]:h-[28rem]
+              min-[768px]:h-96
+              ">
                <Image
                src={step1}
                alt="an 24 within a circle to represent an offer in 24 hours"
@@ -34,7 +56,22 @@ export default function ProcessSection () {
               </p>
               </div>
 
-              <div className="flex flex-col items-center mt-4 mb-4 bg-sitedrkblu opacity-75 p-2 border-2 border-white rounded-lg">
+              <div className="
+              flex
+               flex-col
+               items-center
+               mt-4
+               mb-4
+               bg-sitedrkblu
+               opacity-75
+               p-2
+               border-2
+               border-white
+               rounded-lg
+               min-[540px]:w-2/3
+               min-[540px]:h-[28rem]
+               min-[768px]:h-96
+               ">
                <Image
                src={step2}
                alt="an 24 within a circle to represent an offer in 24 hours"
@@ -49,7 +86,22 @@ export default function ProcessSection () {
               </p>
               </div>
 
-              <div className="flex flex-col items-center mt-4 mb-4 bg-sitedrkblu opacity-75 p-2 border-2 border-white rounded-lg">
+              <div className="
+               flex 
+               flex-col
+               items-center
+               mt-4
+               mb-4
+               bg-sitedrkblu
+               opacity-75
+               p-2 
+               border-2
+               border-white
+               rounded-lg
+               min-[540px]:w-2/3
+               min-[540px]:h-[28rem]
+               min-[768px]:h-96
+                ">
                <Image
                src={step3}
                alt="an 24 within a circle to represent an offer in 24 hours"
