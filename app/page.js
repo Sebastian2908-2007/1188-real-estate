@@ -39,7 +39,15 @@ export default function Home() {
    min-[768px]:p-8
    gap-8
    ">
-   <section className="p-4  bg-white rounded-lg mt-4 opacity-80">
+   <section className="p-4
+    bg-white
+    rounded-lg
+    mt-4
+    opacity-80
+    min-[768px]:flex
+    min-[768px]:flex-col
+    min-[768px]:items-center
+   ">
     <h2 className="text-xl text-center mb-4 font-bold drop-shadow-3xl">The easiest way to sell your house fast</h2>
     <Image
     className="mb-4 rounded-lg"
@@ -74,7 +82,15 @@ export default function Home() {
     </p>
    </section>
 
-   <section className="p-4  bg-white rounded-lg mt-4 opacity-80">
+   <section className="p-4
+    bg-white
+    rounded-lg
+    mt-4
+    opacity-80
+    min-[768px]:flex
+    min-[768px]:flex-col
+    min-[768px]:items-center
+   ">
    <h2 className="text-xl text-center mb-4 font-bold drop-shadow-3xl">More Than Cash Offers</h2>
    <Image
    className="mb-4 rounded-lg"

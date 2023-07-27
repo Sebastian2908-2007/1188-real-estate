@@ -31,6 +31,7 @@ export default function Hero () {
         <Image
         src={wasatch}
         alt="wasatch front"
+        className="min-[1366px]:w-full"
         />
     
         </div>

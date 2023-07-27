@@ -17,14 +17,24 @@ export default function ProcessSection () {
         ">
             <InitialForm/>
             <section className="flex flex-col items-center mt-4">
-            <h2 className="text-center text-white text-xl font-bold drop-shadow-3xl mt-4 mb-4">Dont wait Months to sell your property</h2>
+            <h2 className="text-center
+             text-white
+             text-xl
+             font-bold
+             drop-shadow-3xl
+             mt-4
+             mb-4
+             min-[1028px]:text-2xl
+            ">
+                Dont wait Months to sell your property
+            </h2>
             <section className="
             flex 
             flex-col
             items-center
-            min-[540px]:flex-row
-            min-[540px]:w-full
-            min-[540px]:space-x-2
+            min-[768px]:flex-row
+            min-[768px]:w-full
+            min-[768px]:space-x-2
             ">
               <div className="
               flex 
@@ -38,9 +48,9 @@ export default function ProcessSection () {
               border-2 
               border-white
               rounded-lg
-              min-[540px]:w-2/3
-              min-[540px]:h-[28rem]
-              min-[768px]:h-96
+              min-[540px]:pb-4
+              min-[768px]:w-2/3
+              min-[768px]:h-[24rem]
               ">
                <Image
                src={step1}
@@ -50,7 +60,7 @@ export default function ProcessSection () {
                <span className="text-center mt-1 mb-1 text-white">Step 1</span>
                <h3 className="text-center mt-1 mb-1 text-sitelteblu">Fill out the Form above</h3>
                <p className="text-center mt-1 mb-1 text-white">
-                Discover the ease of our Utah Cash Offer Program - get a quick,
+                Discover the ease of our 2908 Cash Offer Program - get a quick,
                 fair, all-cash offer in just 24 hours, hassle-free, and with
                  no obligations or fees.
               </p>
@@ -68,9 +78,9 @@ export default function ProcessSection () {
                border-2
                border-white
                rounded-lg
-               min-[540px]:w-2/3
-               min-[540px]:h-[28rem]
-               min-[768px]:h-96
+               min-[540px]:pb-4
+               min-[768px]:w-2/3
+               min-[768px]:h-[24rem]
                ">
                <Image
                src={step2}
@@ -98,9 +108,9 @@ export default function ProcessSection () {
                border-2
                border-white
                rounded-lg
-               min-[540px]:w-2/3
-               min-[540px]:h-[28rem]
-               min-[768px]:h-96
+               min-[540px]:pb-4
+               min-[768px]:w-2/3
+               min-[768px]:h-[24rem]
                 ">
                <Image
                src={step3}

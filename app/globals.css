@@ -20,10 +20,13 @@ margin: 2% 2% 3% 2%;
   
   font-size: 1.5rem;
 }
-.hero-heading{
-  @media screen and (min-width: 360px) {
-    transform: translate(-50%, -70%);
-  }
+.process-hero-heading{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -19%); 
+  
+  font-size: 1.5rem;
 }
 
 
@@ -36,29 +39,51 @@ margin: 2% 2% 3% 2%;
 }
 }
 
-.logo{
 @media screen and (min-width: 360px) {
+.logo-drawer{
+  width: 62%;
+}
+.logo{
   width: 30%;
 }
+.hero-heading{
+  transform: translate(-50%, -70%);
 }
-.logo{
-  @media screen and (min-width: 540px) {
-    width: 30%;
+.process-hero-heading{
+  transform: translate(-50%, -50%);
+}
+}
+
+@media screen and (min-width: 390px) {
+  .logo-drawer{
+    width: 52%;
   }
 }
-.logo{
+
+  @media screen and (min-width: 540px) {
+    .logo{
+    width: 30%;
+  }
+  .process-hero-heading{
+    transform: translate(-50%, 90%);
+  }
+}
+
 @media screen and (min-width: 1024px) {
+  .logo{
   margin-bottom: 3%;
 }
 }
  
-.logo{
+
 @media screen and (min-width: 1366px) {
+  .logo{
   width: 35%;
 }
 }
-.logo{
+
 @media screen and (min-width: 1536px) {
+  .logo{
   width: 45%;
 }
 }
