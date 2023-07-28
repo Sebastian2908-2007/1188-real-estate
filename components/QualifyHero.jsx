@@ -1,7 +1,8 @@
 import Image from "next/image";
-import slValley from '../public/reviewshero1.jpg';
+import slValley from '@/public/reviewsHero1.jpg';
 
-export default function ReviewsHero () {
+
+export default function QualifyHero () {
     return(
         <div className="clip-your-needful-style bg-sitedrkblu">
             <h1 className="process-reviews-heading text-center w-64 min-[540px]:w-96">

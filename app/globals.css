@@ -34,6 +34,9 @@ margin: 2% 2% 3% 2%;
   left: 50%;
   transform: translate(-50%, -59%); 
 }
+.form-in-hero{
+  padding: 10%;
+}
 
 /*clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);*/
 @layer utilities {
@@ -72,11 +75,21 @@ margin: 2% 2% 3% 2%;
   .process-hero-heading{
     transform: translate(-50%, 90%);
   }
+  .form-in-hero{
+    transform: translate(-2%, -40%); 
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   .logo{
   margin-bottom: 3%;
+}
+.process-reviews-heading{
+  transform: translate(-50%, 170%);
 }
 }
  
@@ -84,6 +97,9 @@ margin: 2% 2% 3% 2%;
 @media screen and (min-width: 1366px) {
   .logo{
   width: 35%;
+}
+.form-in-hero{
+  transform: translate(-2%, -70%);
 }
 }
 
