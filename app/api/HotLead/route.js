@@ -38,7 +38,7 @@ export async function POST(request) {
       // Save the new HotLead document to the database
       const savedHotLead = await newHotLead.save();
   
-      return NextResponse.json({ hotLead: savedHotLead }, { status: 201 }); // 201 Created
+      return NextResponse.json({ hotLead: savedHotLead }, { status: 200 }); // 200 Created
     } catch (error) {
       return NextResponse.json({ error: 'Server error.' }, { status: 500 });
     }
