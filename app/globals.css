@@ -38,6 +38,16 @@ margin: 2% 2% 3% 2%;
   padding: 10%;
 }
 
+.hero-vid-wrapper{
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.reactPlayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 /*clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);*/
 @layer utilities {
   .clip-your-needful-style {
