@@ -1,5 +1,12 @@
+import SellNowHero from "@/components/SellNowHero";
+import InitialForm from "@/components/InitialForm";
 export default function SellNow () {
     return(
-        <div>This is SellNow</div>
+        <>
+        <SellNowHero/>
+        <section className="p-8">
+        <InitialForm/>
+        </section>
+        </>
     );
 };
