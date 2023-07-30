@@ -1,8 +1,10 @@
 'use client'
 import { useState,useEffect } from "react";
 import { useRouter } from "next/navigation";
-
+import Cookies from "js-cookie";
 const InitialForm = () => {
+    const initialSubmitted =  Cookies.get('initialFormComplete') === 'yes';
+    const [submitted,setSubmitted] = useState(null);
     const [formData, setFormData] = useState({address:'',email:'',phone:''});
     const router = useRouter();
     const handleChange = (event) => {
@@ -13,14 +15,11 @@ const InitialForm = () => {
         });
     };
 
-useEffect(()=> console.log(formData),[formData]);
+useEffect(()=>{if(initialSubmitted)setSubmitted(true)});
 
     const SubmitInitialHotLead = async (event) => {
         event.preventDefault();
         const {address,email,phone} = formData;
-        console.log(address,"in submit");
-        console.log(email,"in submit");
-        console.log(phone,"in submit");
         try{
        const response = await fetch('/api/HotLead',{
             method:'POST',
@@ -33,14 +32,17 @@ useEffect(()=> console.log(formData),[formData]);
         const data = await response.json();
         const {hotLead} = data;
         const {_id} = hotLead;
-        console.log(_id,"MY ID Maybe");
         router.push(`/sellnow/${_id}`);
+        Cookies.set('initialFormComplete', 'yes', { expires: 777 });
+        Cookies.set('userId', _id, { expires: 777 });
     }
     }catch(e) {
         console.log(e);
     }
     };
+
     return(
+        !submitted ? (
      <form onSubmit={SubmitInitialHotLead}
      className="hero-form
       flex flex-col
@@ -92,7 +94,7 @@ useEffect(()=> console.log(formData),[formData]);
         <input onChange={handleChange} className="rounded-lg mb-2 w-48 min-[768px]:w-64" type="text" name="phone" />
      </div>
      <button type="submit" className="rounded-lg mb-2 bg-sitegrn p-2 text-white font-bold mt-4">Cash Offer</button>
-     </form>
+     </form>):null
     );
 };
 export default InitialForm;

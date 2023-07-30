@@ -122,7 +122,7 @@ if(response.ok) {
     const {hotLead} = data;
    console.log(hotLead);
  setHouseDetSubmitted(true);
- Cookies.set('HouseDetComplete', 'yes', { expires: 777 })
+ Cookies.set('HouseDetComplete', 'yes', { expires: 777 });
 }
 }catch(e) {
     console.log(e);

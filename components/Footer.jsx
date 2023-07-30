@@ -1,4 +1,8 @@
+'use client'
+import Link from "next/link";
+import Cookies from "js-cookie";
 const Footer = () => {
+    const userId = Cookies.get('userId');
     return(
         <footer className="
          flex flex-col
@@ -9,10 +13,24 @@ const Footer = () => {
          min-[360px]:pr-10
          ">
                <nav className="flex flex-row justify-between px-1 my-2">
+               <Link href='/process'>
             <span className="text-sitegrn text-sm">Process</span>
+            </Link>
+            <Link href='/qualify'>
             <span className="text-sitegrn text-sm">Qualify</span>
+            </Link>
+            <Link href='/about'>
             <span className="text-sitegrn text-sm">About</span>
-            <span className="text-sitegrn text-sm">Sell now</span>
+            </Link>
+            {!userId ?
+              <Link href='/sellnow'>
+              <span className=' text-sm text-sitegrn'>Sell Now</span>
+                </Link>
+                :
+              <Link href= {`/sellnow/${userId}`}>
+                <span className=' text-sm text-sitegrn'>Sell Now</span>
+              </Link>
+                   }
         </nav>
             <div className="flex flex-row justify-between px-1 mb-2">
             <span className='text-sitelteblu text-xs'>
