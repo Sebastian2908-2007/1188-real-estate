@@ -1,9 +1,9 @@
 'use client'
 import FormSelect from "./FormSelect";
 import { useState, useEffect } from "react";
+import Cookies from "js-cookie";
 
-
-const HouseDetailsForm = () => {
+const HouseDetailsForm = ({setHouseDetSubmitted,params}) => {
     /**map a select component for each obj pass the object to the select to populate label and options as well
      * as informing it which field we will be updating
      */
@@ -81,23 +81,108 @@ const HouseDetailsForm = () => {
         basementType:'',
         listedStatus:'',
         propertyCondition:'',
-       /* lengthOwned:'',
+        lengthOwned:'',
         repairs:'',
-        walkThroughVideo:''*/
+        /*walkThroughVideo:''*/
          });
 useEffect(() => {console.log(houseInfo)},[houseInfo]);
+  
+const handleChange = (event) => {
+    const {name,value} = event.target;
+    setHouseInfo({
+        ...houseInfo,
+        [name]:value
+    });
+};
+
+const SubmitHouseDetails = async (event) => {
+    event.preventDefault();
+    const {
+        garageType,atticType,
+        occupiedStatus, basementType,
+        listedStatus,propertyCondition,
+        lengthOwned,repairs
+    } = houseInfo;
+
+    try{
+   const response = await fetch(`/api/HouseInfo/${params.id}`,{
+        method:'POST',
+        headers:{
+            "Content-Type":"application/json",
+        },
+        body: JSON.stringify({
+            garageType:garageType,atticType:atticType,
+            occupiedStatus: occupiedStatus, basementType:basementType,
+            listedStatus:listedStatus,propertyCondition:propertyCondition,
+            lengthOwned:lengthOwned,repairs:repairs
+        })
+    });
+if(response.ok) {
+    const data = await response.json();
+    const {hotLead} = data;
+   console.log(hotLead);
+ setHouseDetSubmitted(true);
+ Cookies.set('HouseDetComplete', 'yes', { expires: 777 })
+}
+}catch(e) {
+    console.log(e);
+}
+};
+
     return(
-        <form 
+        <form onSubmit={SubmitHouseDetails}
      className="hero-form
       flex flex-col
       items-center
       bg-sitedrkblu
-      opacity-75
+      opacity-50
       p-2
+      mb-[11%]
       rounded-lg
       min-[540px]:w-64
       min-[768px]:w-80
       ">
+        <h3 className="text-sitelteblu mb-8 font-extrabold text-center">Property Info</h3>
+        <div className="flex flex-col items-center">        
+            <label className="
+            mb-1
+             text-sitelteblu
+             font-bold
+             text-center
+            " 
+            htmlFor="lengthOwned"
+            >
+                How long have you owned the property?
+        </label>
+        <input onChange={handleChange}
+        className="
+         border
+         border-black-4
+         rounded-lg
+         mb-1 w-48
+         min-[768px]:w-64"
+         type="text" name="lengthOwned" /> 
+        </div>
+        <div className="flex flex-col items-center">        
+            <label className="
+            mb-1
+             text-sitelteblu
+             font-bold
+             text-center
+            " 
+            htmlFor="repairs"
+            >
+                What type of repairs does the property need?
+        </label>
+        <textarea onChange={handleChange}
+        className="
+         border
+         border-black-4
+         rounded-lg
+         mb-1 w-48
+         min-[768px]:w-64"
+         type="text" name="repairs" /> 
+        </div>
         {selectElInfo.map(dataObj => (
             <div key={dataObj.key}  className="flex flex-col ">        
             <label className="
@@ -111,13 +196,14 @@ useEffect(() => {console.log(houseInfo)},[houseInfo]);
                 {dataObj.labelTitle}
         </label> 
             <FormSelect 
-            houseInfo={houseInfo}
-            setHouseInfo={setHouseInfo}
+            formInfo={houseInfo}
+            setFormInfo={setHouseInfo}
             dataObj={dataObj}
             />
             
         </div>
         ))}
+        <button type="submit" className="rounded-lg mb-2 bg-sitegrn p-2 text-white font-bold mt-4">Submit</button>
       </form>
     );
 };
