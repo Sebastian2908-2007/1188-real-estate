@@ -44,7 +44,7 @@ export async function POST(request, response) {
       const savedAdmin = await newAdmin.save();
   
       // Create a JWT token with first name, last name,email and role as payload
-      const tokenPayload = { firstName, lastName, role,email, };
+      const tokenPayload = { firstName, lastName, role,email, id:savedAdmin._id };
       const token = jwt.sign(tokenPayload, process.env.JWT_SECRET, { expiresIn: '1h' });
   
       // Set the token in a cookie (for the browser)
