@@ -1,9 +1,14 @@
 'use client'
 import Cookies from "js-cookie";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 const CreateAdminForm = () => {
-    const [adminInfo,setAdminInfo] = useState({});
+const router = useRouter();
+    const [adminInfo,setAdminInfo] = useState({
+        firstName:'',lastName:'',email:'',
+        role:'',password:"",superAdmin:''
+    });
+
     const handleChange = () => {
         const {name,value} = event.target;
         setAdminInfo({
@@ -11,7 +16,32 @@ const CreateAdminForm = () => {
           [name]:value 
         });
     };
-    const submitCreate = () => {};
+
+    const submitCreate = async (event) => {
+        event.preventDefault();
+        try{
+         const {firstName,lastName,role,superAdmin,password,email} = adminInfo;
+         
+         const response = await fetch('/api/Admin',{
+             method:'POST',
+             headers:{
+                 'Content-Type':'Application/json'
+             },
+             body: JSON.stringify({firstName:firstName,lastName:lastName,role:role,superAdmin:superAdmin,password:password,email:email})
+         });
+         if(response.ok) {
+             const data = await response.json();
+         const {admin,token} = data;
+         //console.log(admin);
+         //console.log(token);
+         Cookies.set('adminToken',token,{expires: 3/24});
+         router.push(`/admin/dashboard/${admin._id}`);
+         }
+        }catch(e){
+         console.log(e);
+        }
+    };
+   useEffect(() => {console.log(adminInfo)},[adminInfo]);
     return(
         <form onSubmit={submitCreate}
         className="hero-form

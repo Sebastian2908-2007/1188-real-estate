@@ -44,14 +44,14 @@ export async function POST(request, response) {
       const savedAdmin = await newAdmin.save();
   
       // Create a JWT token with first name, last name,email and role as payload
-      const tokenPayload = { firstName, lastName, role,email };
+      const tokenPayload = { firstName, lastName, role,email, };
       const token = jwt.sign(tokenPayload, process.env.JWT_SECRET, { expiresIn: '1h' });
   
       // Set the token in a cookie (for the browser)
      
   
       // Respond with success message and admin data
-      return NextResponse.json({ message: 'Admin signed up successfully.', admin: savedAdmin, token:token }, { status: 201 }); // 201 Created
+      return NextResponse.json({ message: 'Admin signed up successfully.', admin: savedAdmin, token:token }, { status: 200 }); // 200 Created
     } catch (error) {
       return NextResponse.json({ error: 'Server error.' }, { status: 500 }); // 500 Internal Server Error
     }
