@@ -18,6 +18,7 @@ const AdminLoginForm = () => {
         event.preventDefault();
        try{
         const {password,email} = loginInfo;
+        
         const response = await fetch('/api/Admin/Login',{
             method:'POST',
             headers:{
@@ -25,11 +26,14 @@ const AdminLoginForm = () => {
             },
             body: JSON.stringify({password:password,email:email})
         });
-        const {admin,token} = await response.json();
-        console.log(admin);
-        console.log(token);
+        if(response.ok) {
+            const data = await response.json();
+        const {admin,token} = data;
+        //console.log(admin);
+        //console.log(token);
         Cookies.set('adminToken',token,{expires: 3/24});
         router.push(`/admin/dashboard/${admin._id}`);
+        }
        }catch(e){
         console.log(e);
        }

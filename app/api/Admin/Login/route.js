@@ -7,6 +7,7 @@ import jwt  from 'jsonwebtoken';
   export async function POST(request) {
     let token;
     const {email,password} = await request.json();
+    
     try {
       // Connect to the MongoDB database
       await dbConnect();
@@ -23,12 +24,12 @@ import jwt  from 'jsonwebtoken';
           process.env.JWT_SECRET,
           {expiresIn:'3h'}
         );
+      }else{
+        return NextResponse.json({ error: 'improper credentials sorry try again' }, { status: 403 }); //forbidden
       }
-      console.log(password,"user");
-      console.log(admin.password,"STOREEd");
-  const match = await bcrypt.compare(admin.password,password);
-  console.log(match);
 
+  const match = await bcrypt.compare(password,admin.password);
+  
   if(match){
     return NextResponse.json({ admin: admin, token: token }, { status: 200 }); // 200 OK
   }else{
