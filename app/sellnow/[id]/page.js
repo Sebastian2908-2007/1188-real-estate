@@ -25,7 +25,7 @@ console.log(namesSubmitted);
     return (
     <>
     <SellNowHero/>
-    <section className="p-2">
+    <section className="p-2 min-[540px]:flex min-[540px]:flex-col min-[540px]:items-center">
       {!nameesSubmitted ? <NameForm params={params} setNamesSubmitted={setNamesSubmitted}/>:<div className="flex flex-col items-center"><Image
       src={check}
       alt="big green checkmark indicating that you have filled out the name form"

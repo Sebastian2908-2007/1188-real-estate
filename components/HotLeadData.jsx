@@ -4,7 +4,14 @@ const HotLeadData = ({hotLead}) => {
     
     console.log(hotLead._id)
     return(
-  <div className="flex flex-col items-center border border-white-2 mb-8">
+  <div className="flex
+   flex-col
+   items-center
+   border
+   border-white-2
+   mb-8
+   min-[540px]:w-72
+  ">
     <div className="flex flex-col items-center mb-4">
     <h2 className="text-center text-sitegrn">Basic Info</h2>
     <label className="text-white font-bold text-center">Seller Email</label>

@@ -7,8 +7,9 @@ export const isAdmin = (paramId) => {
         return false;
     }
     const decodedToken = jwt.decode(adminCookie);
+    console.log(decodedToken._id,"in Admin func");
    ///console.log(decodedToken.id,"ID");
-   if(paramId === decodedToken.id) {
+   if(paramId === decodedToken._id) {
     return true;
    }else{
     return false;
