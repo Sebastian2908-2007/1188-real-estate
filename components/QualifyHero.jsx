@@ -1,5 +1,5 @@
 import Image from "next/image";
-import slValley from '../public/reviewsHero1.jpg';
+import slValley from '@/public/reviewsHero1.jpg';
 
 
 export default function QualifyHero () {

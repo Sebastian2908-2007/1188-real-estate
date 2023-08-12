@@ -1,5 +1,5 @@
 import Image from "next/image";
-import wasatch from '../public/wasatch.jpg';
+import wasatch from '@/public/wasatch.jpg';
 
 export default function Hero () {
     return(

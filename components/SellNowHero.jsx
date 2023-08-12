@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import moneyImg from '@/public/sellnowhero1460.jpg';
+import moneyImg from '../public/sellnowhero1460.jpg';
 
 const SellNowHero = () => {
     return(

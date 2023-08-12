@@ -1,6 +1,6 @@
 'use client'
 import ReactPlayer from 'react-player';
-import video from '@/public/heroaboutvideo.mp4';
+import video from '../public/heroaboutvideo.mp4';
 const AboutHero = () => {
     return(
 <div className="hero-vid-wrapper">
