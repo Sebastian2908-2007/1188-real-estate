@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.logo{
+  width: 39%;
+margin: 2% 2% 3% 2%;
+}
+.logo-drawer{
+  width: 82%;
+  margin: 2% 2% 3% 11%;
+}
+
+.hero-heading{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -120%); 
+  color: white;
+  
+  font-size: 1.5rem;
+}
+.process-hero-heading{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -19%); 
+  
+  font-size: 1.5rem;
+}
+.process-reviews-heading{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -59%); 
+}
+.form-in-hero{
+  padding: 10%;
+}
+
+.hero-vid-wrapper{
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.reactPlayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/*clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);*/
+@layer utilities {
+  .clip-your-needful-style {
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+@media screen and (min-width:768px){
+}
+}
+
+@media screen and (min-width: 360px) {
+.logo-drawer{
+  width: 62%;
+}
+.logo{
+  width: 30%;
+}
+.hero-heading{
+  transform: translate(-50%, -70%);
+}
+.process-hero-heading{
+  transform: translate(-50%, -50%);
+}
+}
+
+@media screen and (min-width: 390px) {
+  .logo-drawer{
+    width: 52%;
+  }
+}
+
+  @media screen and (min-width: 540px) {
+    .logo{
+    width: 30%;
+  }
+  .process-hero-heading{
+    transform: translate(-50%, 90%);
+  }
+  .form-in-hero{
+    transform: translate(-2%, -40%); 
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .logo{
+  margin-bottom: 3%;
+}
+.process-reviews-heading{
+  transform: translate(-50%, 170%);
+}
+}
+ 
+
+@media screen and (min-width: 1366px) {
+  .logo{
+  width: 35%;
+}
+.form-in-hero{
+  transform: translate(-2%, -70%);
+}
+}
+
+@media screen and (min-width: 1536px) {
+  .logo{
+  width: 45%;
+}
+}
