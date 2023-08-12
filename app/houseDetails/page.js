@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react';
-import VideoPlayer from './VideoPlayer';
+import VideoPlayer from '@/components/VideoPlayer';
 
 const HouseDetailsPage = ({ houseInfoId }) => {
   const [videoUrl, setVideoUrl] = useState('');
