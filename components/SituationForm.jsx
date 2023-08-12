@@ -1,6 +1,6 @@
 'use client'
 import FormSelect from "./FormSelect";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Cookies from "js-cookie";
 const SituationForm = ({setSituationSubmitted,params}) => {
     const [situationInfo,setSituationInfo] = useState({sellFastStatus:"",openToPayments:'',bestCallTime:'',sellerGoal:''});
@@ -34,7 +34,6 @@ const SituationForm = ({setSituationSubmitted,params}) => {
                 
             ]},
     ];
-    useEffect(() => {console.log(situationInfo)},[situationInfo]);
 
     const handleChange = (event) => {
         const {name,value} = event.target;
@@ -64,7 +63,6 @@ const SituationForm = ({setSituationSubmitted,params}) => {
     if(response.ok) {
         const data = await response.json();
         const {hotLead} = data;
-       console.log(hotLead);
      setSituationSubmitted(true);
      Cookies.set('situationSubmitted', 'yes', { expires: 777 })
     }
@@ -121,7 +119,16 @@ const SituationForm = ({setSituationSubmitted,params}) => {
          min-[768px]:w-64"
          type="text" name="sellerGoal" /> 
         </div>
-        <button type="submit" className="rounded-lg mb-2 bg-sitegrn p-2 text-white font-bold mt-4">Submit</button>
+        <button type="submit" className="
+        rounded-lg
+         mb-2
+         bg-sitegrn
+         hover:bg-sitelteblu
+         p-2
+         text-white
+         font-bold
+         mt-4
+        ">Submit</button>
       </form>
     );
 };

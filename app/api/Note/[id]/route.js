@@ -7,7 +7,7 @@ import { NextResponse } from "next/server";
 export async function POST(request,{params}) {
     const  hotLeadId  = params.id;
     const { noteText } = await request.json();
-     console.log(hotLeadId);
+    
     try {
       await dbConnect(); // Connect to MongoDB
   

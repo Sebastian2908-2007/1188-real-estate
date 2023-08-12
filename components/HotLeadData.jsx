@@ -2,7 +2,7 @@
 const HotLeadData = ({hotLead}) => {
     const {houseInfo,situation} = hotLead;
     
-    console.log(hotLead._id)
+   
     return(
   <div className="flex
    flex-col

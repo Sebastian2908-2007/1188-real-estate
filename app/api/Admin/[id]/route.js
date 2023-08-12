@@ -35,7 +35,6 @@ export async function DELETE(request,{params}) {
       // Return the deleted Admin ID in the response
       return NextResponse.json({ deletedAdminId: deletedAdmin._id }, { status: 200 }); // 200 OK
     } catch (error) {
-        console.log(error);
       // If there's an error, return an error response
       return NextResponse.json({ error: 'Server error.' }, { status: 500 }); // 500 Internal Server Error
     }
@@ -48,8 +47,7 @@ export async function DELETE(request,{params}) {
       // Get the Admin ID and data to be updated from the request params and body
       const { id } = params;
       const { firstName, lastName, email, role, password,token } = await request.json();
-  console.log(token);
-  console.log(role);
+ 
       // Verify and decode the JWT token from the request
       const { email: decodedEmail } = jwt.verify(token, process.env.JWT_SECRET);
   

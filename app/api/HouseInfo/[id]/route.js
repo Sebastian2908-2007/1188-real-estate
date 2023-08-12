@@ -14,7 +14,7 @@ export async function GET(request,{params}) {
       if (!houseInfo) {
         return NextResponse.json({ error: 'HouseInfo not found.' }, { status: 404 }); // 404 Not Found
       }
-  console.log('GET BY id working')
+  
       return NextResponse.json({ houseInfo }, { status: 200 }); // 200 OK
     } catch (error) {
       return NextResponse.json({ error: 'Server error.' }, { status: 500 }); // 500 Internal Server Error
@@ -23,7 +23,7 @@ export async function GET(request,{params}) {
 
 export async function DELETE(request,{params}) {
     const { id } = params;
-    console.log(id);
+    
   
     try {
       await dbConnect(); // Connect to MongoDB
@@ -44,7 +44,6 @@ export async function DELETE(request,{params}) {
   export async function PUT(request,{params}) {
     const { id } = params;
     const updatedFields = await request.json();
-  console.log(updatedFields);
     try {
       await dbConnect(); // Connect to MongoDB
   

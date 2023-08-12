@@ -93,7 +93,15 @@ useEffect(()=>{if(initialSubmitted)setSubmitted(true)});
         </label>
         <input onChange={handleChange} className="rounded-lg mb-2 w-48 min-[768px]:w-64" type="text" name="phone" />
      </div>
-     <button type="submit" className="rounded-lg mb-2 bg-sitegrn p-2 text-white font-bold mt-4">Cash Offer</button>
+     <button type="submit" className="
+     rounded-lg
+      mb-2 
+     bg-sitegrn 
+     hover:bg-sitelteblu
+     p-2 
+     text-white 
+     font-bold 
+     mt-4">Cash Offer</button>
      </form>):null
     );
 };

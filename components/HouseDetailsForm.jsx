@@ -1,6 +1,6 @@
 'use client'
 import FormSelect from "./FormSelect";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Cookies from "js-cookie";
 
 const HouseDetailsForm = ({setHouseDetSubmitted,params}) => {
@@ -85,7 +85,6 @@ const HouseDetailsForm = ({setHouseDetSubmitted,params}) => {
         repairs:'',
         /*walkThroughVideo:''*/
          });
-useEffect(() => {console.log(houseInfo)},[houseInfo]);
   
 const handleChange = (event) => {
     const {name,value} = event.target;
@@ -120,7 +119,7 @@ const SubmitHouseDetails = async (event) => {
 if(response.ok) {
     const data = await response.json();
     const {hotLead} = data;
-   console.log(hotLead);
+   
  setHouseDetSubmitted(true);
  Cookies.set('HouseDetComplete', 'yes', { expires: 777 });
 }
@@ -203,7 +202,16 @@ if(response.ok) {
             
         </div>
         ))}
-        <button type="submit" className="rounded-lg mb-2 bg-sitegrn p-2 text-white font-bold mt-4">Submit</button>
+        <button type="submit" className="
+        rounded-lg
+         mb-2
+         bg-sitegrn
+         hover:bg-sitelteblu
+         p-2
+         text-white
+         font-bold
+         mt-4
+        ">Submit</button>
       </form>
     );
 };

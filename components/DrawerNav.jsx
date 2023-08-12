@@ -1,5 +1,6 @@
 'use client'
 import * as React from 'react';
+import dynamic from 'next/dynamic';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
@@ -21,7 +22,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../public/relogo (1).png';
-import Cookies from 'js-cookie';
+const SellNowLink = dynamic(() =>import('@/components/SellNowLink'),{ssr: false});
 const iconListITemStyle = {
   '@media(min-width: 540px)' : {
     fontSize: '2rem'
@@ -29,8 +30,7 @@ const iconListITemStyle = {
 };
 
 export default function DrawerNav() {
-  const userId = Cookies.get('userId');
-  console.log(userId);
+  
   const [state, setState] = React.useState({
     top: false,
     left: false,
@@ -97,15 +97,7 @@ export default function DrawerNav() {
               <ListItemIcon className='text-sitegrn mr-0'>
                 <AttachMoneyIcon sx={iconListITemStyle}/>
               </ListItemIcon>
-              {!userId ?
-              <Link href='/sellnow'>
-              <span className=' text-xs text-sitegrn min-[540px]:text-xl'>Sell Now</span>
-                </Link>
-                :
-              <Link href= {`/sellnow/${userId}`}>
-                <span className=' text-xs text-sitegrn min-[540px]:text-xl'>Sell Now</span>
-              </Link>
-                   }
+            <SellNowLink/>
             </ListItemButton>
           </ListItem>  
       </List>

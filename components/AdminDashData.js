@@ -7,6 +7,7 @@ async function getHotLeads() {
 const AdminDashData = async () => {
     const hotLeadData = await getHotLeads();
     const {hotLeads} = hotLeadData;
+   
     return(
 <section className="p-4 min-[540px]:flex min-[540px]:flex-col min-[540px]:items-center">
     {hotLeads.map(hotLead => (

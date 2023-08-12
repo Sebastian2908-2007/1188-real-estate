@@ -6,8 +6,6 @@ import { NextResponse } from "next/server";
 /**this route will be used to update HouseInfo documents that are attached to coldLeads the HouseInfo id comes over in the request */
 export async function PUT(request) {
     const { id, ...updatedFields } = await request.json();
-    console.log(id);
-    console.log(updatedFields);
   
     try {
       await dbConnect(); // Connect to MongoDB

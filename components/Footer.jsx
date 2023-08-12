@@ -1,6 +1,8 @@
 'use client'
 import Link from "next/link";
 import Cookies from "js-cookie";
+import dynamic from "next/dynamic";
+const SellNowLink = dynamic(() =>import('@/components/SellNowLink'),{ssr: false});
 const Footer = () => {
     const userId = Cookies.get('userId');
     return(
@@ -22,15 +24,7 @@ const Footer = () => {
             <Link href='/about'>
             <span className="text-sitegrn text-sm">About</span>
             </Link>
-            {!userId ?
-              <Link href='/sellnow'>
-              <span className=' text-sm text-sitegrn'>Sell Now</span>
-                </Link>
-                :
-              <Link href= {`/sellnow/${userId}`}>
-                <span className=' text-sm text-sitegrn'>Sell Now</span>
-              </Link>
-                   }
+          <SellNowLink/>
         </nav>
             <div className="flex flex-row justify-between px-1 mb-2">
             <span className='text-sitelteblu text-xs'>

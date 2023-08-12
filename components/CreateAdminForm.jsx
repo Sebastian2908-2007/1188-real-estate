@@ -32,8 +32,7 @@ const router = useRouter();
          if(response.ok) {
              const data = await response.json();
          const {admin,token} = data;
-         //console.log(admin);
-         //console.log(token);
+      
          Cookies.set('adminToken',token,{expires: 3/24});
          router.push(`/admin/dashboard/${admin._id}`);
          }
@@ -41,7 +40,7 @@ const router = useRouter();
          console.log(e);
         }
     };
-   useEffect(() => {console.log(adminInfo)},[adminInfo]);
+   
     return(
         <form onSubmit={submitCreate}
         className="hero-form

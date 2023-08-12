@@ -21,7 +21,7 @@ const page = ({params}) => {
     if(situationInfoSubmitted) setSituationSubmitted(true);
 
 });
-console.log(namesSubmitted);
+
     return (
     <>
     <SellNowHero/>

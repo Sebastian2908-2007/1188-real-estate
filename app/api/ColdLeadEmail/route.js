@@ -7,8 +7,6 @@ import { NextResponse } from "next/server";
 
 export async function DELETE(request) {
     const { coldLeadId, coldLeadEmailId } = await request.json();
-    console.log(coldLeadId);
-    console.log(coldLeadEmailId);
   
     try {
       await dbConnect(); // Connect to MongoDB

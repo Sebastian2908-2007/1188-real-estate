@@ -1,5 +1,5 @@
 'use client'
-import { useState,useEffect } from "react";
+import { useState } from "react";
 import Cookies from "js-cookie";
 
 const NameForm = ({setNamesSubmitted,params}) => {
@@ -16,8 +16,7 @@ const NameForm = ({setNamesSubmitted,params}) => {
     const SubmitNames = async (event) => {
         event.preventDefault();
         const {firstName,lastName} = names;
-        console.log(firstName,"in submit");
-        console.log(lastName,"in submit");
+      
       
         try{
        const response = await fetch(`/api/HotLead/${params.id}`,{
@@ -30,7 +29,7 @@ const NameForm = ({setNamesSubmitted,params}) => {
     if(response.ok) {
         const data = await response.json();
         const {hotLead} = data;
-       console.log(hotLead);
+       
      setNamesSubmitted(true);
      Cookies.set('nameFormComplete', 'yes', { expires: 777 })
     }
@@ -39,7 +38,6 @@ const NameForm = ({setNamesSubmitted,params}) => {
     }
     };
 
-useEffect(() => {console.log(names)},[names]);
     return(
         <form onSubmit={SubmitNames}
      className="hero-form
@@ -79,7 +77,16 @@ useEffect(() => {console.log(names)},[names]);
         </label>
         <input onChange={handleChange} className="border border-black-4 rounded-lg mb-1 w-48 min-[768px]:w-64" type="text" name="lastName" />
     </div>
-    <button type="submit" className="rounded-lg mb-2 bg-sitegrn p-2 text-white font-bold mt-4">Submit</button>
+    <button type="submit" className="
+    rounded-lg
+     mb-2
+     bg-sitegrn
+     hover:bg-sitelteblu
+     p-2
+     text-white
+     font-bold
+     mt-4
+    ">Submit</button>
       </form>
     );
 };

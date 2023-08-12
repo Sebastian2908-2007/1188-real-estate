@@ -6,8 +6,7 @@ import { NextResponse } from "next/server";
 
 export async function DELETE(request) {
     const { coldLeadId, coldLeadPhoneId } = await request.json();
-  console.log(coldLeadId);
-  console.log(coldLeadPhoneId);
+
     try {
       await dbConnect(); // Connect to MongoDB
   
@@ -41,7 +40,7 @@ export async function DELETE(request) {
         { status: 200 }
       ); // 200 OK
     } catch (error) {
-        console.log(error);
+    
       return NextResponse.json({ error: 'Server error.' }, { status: 500 }); // 500 Internal Server Error
     }
   }

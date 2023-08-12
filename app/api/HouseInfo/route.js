@@ -8,7 +8,6 @@ import { NextResponse } from "next/server";
 
 export async function POST(request, response) {
     const body  =  await request.json();
-    console.log(body);
   const {
     garageType,
     atticType,
@@ -65,10 +64,9 @@ export async function GET(request) {
       await dbConnect(); // Connect to MongoDB
   
       const houseInfoList = await HouseInfo.find();
-  console.log(houseInfoList);
       return NextResponse.json({ houseInfoList }, { status: 200 });
     } catch (error) {
-        console.log(error)
+       
       return NextResponse.json({ error: 'my Server error.' }, { status: 500 });
     }
   }

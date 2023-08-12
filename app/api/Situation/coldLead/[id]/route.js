@@ -9,8 +9,6 @@ export async function POST(request,{params}) {
     const  coldLeadId  = params.id;
     const situationData = await request.json();
 
-    console.log(coldLeadId);
-    console.log(situationData);
   
     try {
       await dbConnect(); // Connect to MongoDB

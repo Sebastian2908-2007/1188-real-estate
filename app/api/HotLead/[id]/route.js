@@ -45,13 +45,11 @@ export async function PUT(request,{params}) {
       // Delete the associated HouseInfo if it exists
       if (existingHotLead.houseInfo) {
         const deletedHouseInfo = await HouseInfo.findByIdAndDelete(existingHotLead.houseInfo);
-        console.log('Deleted HouseInfo ID:', deletedHouseInfo?._id);
       }
   
       // Delete the associated Situation if it exists
       if (existingHotLead.situation) {
         const deletedSituation = await Situation.findByIdAndDelete(existingHotLead.situation);
-        console.log('Deleted Situation ID:', deletedSituation?._id);
       }
   
       // Delete the associated Notes if they exist

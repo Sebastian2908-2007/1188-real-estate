@@ -51,27 +51,20 @@ export async function DELETE(request,{params}) {
   
       // Find the existing ColdLead document by ID
       const existingColdLead = await ColdLead.findById(id);
-  console.log(existingColdLead);
       if (!existingColdLead) {
         return NextResponse.json({ error: 'ColdLead not found.' }, { status: 404 }); // 404 Not Found
       }
   
       // Retrieve the IDs of all notes associated with the ColdLead
       const noteIds = existingColdLead.notes;
-      console.log(noteIds);
-  
       // Retrieve the IDs of all email addresses associated with the ColdLead
       const emailIds = existingColdLead.emailAddresses;
-      console.log(emailIds);
       // Retrieve the IDs of all phone numbers associated with the ColdLead
       const phoneIds = existingColdLead.phone;
-  console.log(phoneIds);
       // Retrieve the ID of the situation associated with the ColdLead
       const situationId = existingColdLead.situation;
-  console.log(situationId);
       // Retrieve the ID of the houseInfo associated with the ColdLead
       const houseInfoId = existingColdLead.houseInfo;
-  console.log(houseInfoId);
       // Delete the ColdLead document
       await existingColdLead.deleteOne();
   
@@ -96,7 +89,6 @@ export async function DELETE(request,{params}) {
   
       return NextResponse.json({ message: 'ColdLead and associated data deleted successfully.' }, { status: 200 }); // 200 OK
     } catch (error) {
-        console.log(error);
       return NextResponse.json({ error: 'Server error meow.' }, { status: 500 }); // 500 Internal Server Error
     }
   }
