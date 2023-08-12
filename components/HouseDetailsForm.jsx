@@ -142,7 +142,8 @@ if(response.ok) {
       min-[768px]:w-80
       ">
         <h3 className="text-sitelteblu mb-8 font-extrabold text-center">Property Info</h3>
-        <div className="flex flex-col items-center">        
+
+        <div className="flex flex-col items-center mb-8">        
             <label className="
             mb-1
              text-sitelteblu
@@ -162,7 +163,8 @@ if(response.ok) {
          min-[768px]:w-64"
          type="text" name="lengthOwned" /> 
         </div>
-        <div className="flex flex-col items-center">        
+
+        <div className="flex flex-col items-center mb-8">        
             <label className="
             mb-1
              text-sitelteblu
@@ -182,8 +184,9 @@ if(response.ok) {
          min-[768px]:w-64"
          type="text" name="repairs" /> 
         </div>
+
         {selectElInfo.map(dataObj => (
-            <div key={dataObj.key}  className="flex flex-col ">        
+            <div key={dataObj.key}  className="flex flex-col items-center mb-8">        
             <label className="
             mb-1
              text-sitelteblu

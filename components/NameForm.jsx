@@ -50,6 +50,7 @@ const NameForm = ({setNamesSubmitted,params}) => {
       rounded-lg
       min-[540px]:w-64
       min-[768px]:w-80
+      min-[1920px]:mb-[0%]
       ">
         <div className="flex flex-col ">        
         <label className="

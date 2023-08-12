@@ -85,7 +85,7 @@ const SituationForm = ({setSituationSubmitted,params}) => {
       ">
         <h3 className="text-sitelteblu mb-8 font-extrabold text-center">Your Situation</h3>
         {selectInfo.map(dataObj => (
-            <div key={dataObj.key}  className="flex flex-col ">        
+            <div key={dataObj.key}  className="flex flex-col items-center mb-8">        
             <label className="
             mb-1
              text-sitelteblu
@@ -99,7 +99,7 @@ const SituationForm = ({setSituationSubmitted,params}) => {
         <FormSelect  formInfo={situationInfo} setFormInfo={setSituationInfo} dataObj={dataObj}/>
         </div>
         ))}
-          <div className="flex flex-col items-center">        
+          <div className="flex flex-col items-center mb-8">        
             <label className="
             mb-1
              text-sitelteblu

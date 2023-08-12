@@ -31,6 +31,16 @@ const page = ({params}) => {
       alt="big green checkmark indicating that you have filled out the name form"
       /></div>
       }
+      <div className="
+      min-[768px]:w-full
+       min-[768px]:flex
+       min-[768px]:flex-row
+       min-[768px]:items-start
+       min-[768px]:justify-between
+       min-[768px]:p-8
+       min-[1024px]:p-32
+       min-[1920px]:p-[34rem]
+       ">
       {!houseDetSubmitted ? <HouseDetailsForm params={params} setHouseDetSubmitted={setHouseDetSubmitted}/>:<div className="flex flex-col items-center">
         <Image
       src={check}
@@ -45,7 +55,7 @@ const page = ({params}) => {
       />
       </div>
       }
-    
+    </div>
     </section>
     </>
     );
