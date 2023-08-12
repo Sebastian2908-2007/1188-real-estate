@@ -1,34 +1,58 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# License
+ ISC
+[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)]
+                 
+      
 
-## Getting Started
+# 1188-real-estate
+ https://github.com/Sebastian2908-2007/1188-real-estate
+ ## Description
 
-First, run the development server:
+This is a project that will allow home owners to request a cash offer for their property. The thing that makes it great is the fact that they can submit a walk through video of their property getting rid of the need to do a real life walk through. I also used google autocomplete for the address field on the lead submission page which I think is really great!
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+![Screenshot (191)](https://user-images.githubusercontent.com/77297220/159556482-46112dcb-f114-4f1e-9308-b28f27c59028.png)
+    
+ ## Table Of Contents
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributors](#contributors)
+* [Test](#test)
+* [Contact](#contact)
+* [Questions](#questions)
+    
+ ## Installation
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+aws-sdk, bcrypt, connect-session-sequelize, dotenv, express, express-handlebars,express-session,multer,mysql2,sequelize
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Usage
+Navigate to https://2908realestate.com and create an account so you can post and leave reviews or even add a real estate lead if you have one. This is now an active business APP so the admin side of things is locked to the public.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+ ## Contributors
 
-## Learn More
+  Sebastian Bowen
 
-To learn more about Next.js, take a look at the following resources:
+ ## Test 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+ n/A
+    
+## Contact
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+ sebastiancrespin279@gmail.com
 
-## Deploy on Vercel
+## Questions
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+ Sebastian2908-2007
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+If you Have any Questions email me @
+
+sebastiancrespin279@gmail.com
+
+
+## License
+ISC 
+[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)]
+
+## License link
+(https://www.isc.org/licenses/)   
+
