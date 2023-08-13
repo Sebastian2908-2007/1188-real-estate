@@ -8,7 +8,7 @@ import check from '@/public/checkmark.png';
 import Image from "next/image";
 import Cookies from "js-cookie";
 
-const page = ({params}) => {
+const Page = ({params}) => {
     const namesSubmitted = Cookies.get('nameFormComplete') === 'yes';
     const houseInfoSubmitted = Cookies.get('HouseDetComplete') === 'yes';
     const situationInfoSubmitted = Cookies.get('situationSubmitted') === 'yes';
@@ -61,4 +61,4 @@ const page = ({params}) => {
     );
 };
 
-export default page;
+export default Page;
