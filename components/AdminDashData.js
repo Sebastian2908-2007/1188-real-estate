@@ -1,6 +1,6 @@
 import HotLeadData from "./HotLeadData";
 async function getHotLeads() {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_DOMAIN }/api/HotLead`);
+    const response = await fetch(`${process.env.NEXT_PUBLIC_DOMAIN }/api/HotLead`,{ next: { revalidate: 30 } });
     const data = await response.json();
     return data;
 };
